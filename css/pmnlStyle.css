@@ -133,14 +133,14 @@
 			Homepage Content
 		*/
 		.pmnlHomepage h3{color:#3d3a7e; text-transform: uppercase; margin:0;}
-		.pmnlHomepage ul{margin:20px 0; padding:0; text-align: center;}
-		.pmnlHomepage ul li{display: inline-block; margin:0 10px; padding:0; position: relative;}
-		.pmnlHomepage ul li:hover a{display: block;}
-		.pmnlHomepage ul li a{display:none;background: rgba(28,175,227,0.8); width:135px; height: 100px; -moz-box-sizing:border-box; box-sizing:border-box; padding:10px; position: absolute; z-index: 20; text-align: left;}
-			.pmnlHomepage ul li a h4{margin:0; font-size:14px; color:#fff;}
-			.pmnlHomepage ul li a h5{margin:0; font-weight: normal; color:#fff;}
-			.pmnlHomepage ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
-			.pmnlHomepage ul li a i:hover{text-decoration: underline;}
+		.pmnlHomepage ul, .pmnlFeaturedJobs ul{margin:20px 0; padding:0; text-align: center;}
+		.pmnlHomepage ul li, .pmnlFeaturedJobs ul li{display: inline-block; margin:0 10px; padding:0; position: relative;}
+		.pmnlHomepage ul li:hover a, .pmnlFeaturedJobs ul li:hover a{display: block;}
+		.pmnlHomepage ul li a, .pmnlFeaturedJobs ul li a{display:none;background: rgba(28,175,227,0.8); width:135px; height: 100px; -moz-box-sizing:border-box; box-sizing:border-box; padding:10px; position: absolute; z-index: 20; text-align: left;}
+			.pmnlHomepage ul li a h4, .pmnlFeaturedJobs ul li a h4{margin:0; font-size:14px; color:#fff;}
+			.pmnlHomepage ul li a h5, .pmnlFeaturedJobs ul li a h5{margin:0; font-weight: normal; color:#fff;}
+			.pmnlHomepage ul li a i, .pmnlFeaturedJobs ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
+			.pmnlHomepage ul li a i:hover, .pmnlFeaturedJobs ul li a i:hover{text-decoration: underline;}
 
 	/*
 	|| Content
@@ -270,9 +270,9 @@
 		/* Profile Management / Progress Sidebar */
 		.progressBars{padding:0; margin:30px 0 0; position: relative;}
 		.progressBars li{position: relative; display: block; float:left; width:100%; margin-bottom:70px;}
-		.progressBars li h5{font-family: 'Eurosti',sans-serif; text-transform: uppercase; font-size:16px; margin:0; color:#00aeef;}
+		.progressBars li h5{font-family: 'Eurosti',sans-serif; text-transform: uppercase; font-size:16px; margin:0; color:#453a71;}
 		.progressBars li div{display:block; position:absolute; top:25px; width:100%; padding:10px 10px; height:40px; border-radius:3px;}
-		.progressBars li div.progress{background:#00aeef; z-index:5; color:#fff;}
+		.progressBars li div.progress{background:#453a71; z-index:5; color:#fff;}
 		.progressBars li div.bg{background:#eaeae8; color:#999; z-index:4;}
 		
 		/* Portfolio Albums */
@@ -298,6 +298,52 @@
 		.albumList .albumControls label{position: relative; z-index: 20;}
 		.albumList .albumControls input.addAItem{ width:100px; cursor: pointer; margin-top:5px;}
 		.albumList .albumControls select{float:left; font-family: Helvetica, sans-serif; text-transform: none; margin:0 8px; padding:1px 3px;}
+
+
+	/* 
+		Job Listings 
+	*/
+
+	/* Job Filter */
+	.joblistFilter{margin:0; padding:0;}
+	.joblistFilter li{display: inline-block; margin:0; padding:0; position: relative; width:200px;}
+	.joblistFilter li a{display: block; padding:20px 50px 20px 30px ; margin:0; color:#fff; font-family: 'Eurosti'; text-transform: uppercase; background:url(../images/icons/arrowdown_white.png) no-repeat  85% 20px;}
+	.joblistFilter li a:hover{background:#aaa url(../images/icons/arrowdown_white.png) no-repeat  85% 20px;}
+		.joblistFilter li ul{position: absolute; left:-40px; top:58px; width:inherit; display: none; }
+		.joblistFilter li ul li{display: block; width: 200px;background:#ccc;}
+		.joblistFilter li ul li a{background-image:none !important; padding:10px 30px; display: block; }
+	.joblistFilter{}
+
+	/* List Filter*/
+	.listFilters{padding:20px 50px 10px; ;}
+	.listFilters a{background:#eee url(../images/icons/x.png) no-repeat 90% 7px; padding:5px 30px 5px 10px; }
+
+	/* Featured Jobs */
+	.pmnlFeaturedJobs{ background: #e9e9e8; padding:10px 0px; margin:0 0 20px;}
+	.pmnlFeaturedJobs h3{text-transform: uppercase; margin-left: 25px;color:#555;}
+	.pmnlFeaturedJobs{}
+
+	/* Job Listing */
+	.pmnlJobList{}
+	.pmnlJobList h3{font-size:1.4em; font-family: 'Eurosti'; margin:0; color:#777; text-transform: uppercase; margin:30px 50px 0px; border-bottom:4px solid #ccc; padding-bottom:10px;}
+	.pmnlJobList ul{margin:0; padding:0 50px 40px;}
+	.pmnlJobList ul li{padding:20px 0 20px; border-bottom:1px solid #ececec;}
+	.pmnlJobList ul li h3{font-size:1.2em; font-family: 'Eurosti'; margin:0; color:#777; border-bottom: none; padding:0;}
+	.pmnlJobList ul li h3 a{text-transform: uppercase; color:#1cafe3;}
+	.pmnlJobList ul li h3 a:hover{color:#317690;}
+	.pmnlJobList ul li h3 em{float:right; font-style: normal; font-size:0.7em;}
+	.pmnlJobList ul li p{margin:4px 0 0; color:#777;}
+	.pmnlJobList ul li p i{margin:0 10px;}
+	.pmnlJobList ul li p a.markJob{background: url(../images/icons/jobfave.png) no-repeat 100% 0 ; padding:4px 24px 0px 0; float:right; text-align: right; color:#888;}
+	.pmnlJobList ul li p a.markJob:hover{background: url(../images/icons/jobfave.png) no-repeat 100% -22px ; color:#333;}
+	.pmnlJobList{}
+
+		/* Pagination */
+		.joblistPagination{text-align:center;}
+		.joblistPagination a{background:#eee; padding:5px 10px;}
+		.joblistPagination a.disabled{background:#fff; cursor: default;}
+		.joblistPagination a.disabled:hover{background:#fff; cursor: default; color:#333;}
+		.joblistPagination a:hover{background:#1cafe3; color:#fff;}
 /*
 	Footer
 */
