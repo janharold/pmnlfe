@@ -1,0 +1,318 @@
+/*
+	Client : PortfolioMNL 
+	Thousand Minds
+	Front-end Developer - Jan Harold Diaz
+	Last Update - June 2013
+	Project Prefix for Classes/IDS - pmnl
+*/
+
+@import url('normalize.css');
+@import url('multi-select.css');
+@import url('icheckSquare/blue.css');
+
+/*
+	Web Fonts
+*/
+@font-face{font-family: "Eurosti"; src: url('webfonts/Eurosti.eot'); src: local("Eurostile"), url('webfonts/Eurosti.woff') format("woff"), url('webfonts/Eurosti.ttf') format("truetype");}
+@font-face{font-family: "bankgothiclightbt"; src: url('webfonts/bankgothiclightbt.eot'); src: local("Bank Gothic Light BT"), url('webfonts/bankgothiclightbt.woff') format("woff"), url('webfonts/bankgothiclightbt.ttf') format("truetype"); } 
+
+	.euroStile{font-family: "Eurosti";}
+	.bankGothic{font-family: "bankgothiclightbt";}
+		.tAC{text-transform: uppercase;}
+
+/*
+	Global Settings
+*/
+	div,span{-moz-box-sizing:border-box; box-sizing:border-box;}
+	a{text-decoration: none; color:#000203;}
+	ul,li{list-style: none;}
+/* 
+	Wraps and Wireframe 
+*/
+.centerWrap{width:1200px; margin:0px auto 0;}
+.innerWrap{width: 1140px; margin: 0 auto;}
+.floatWrap{width:1200px; float:left;}
+	
+	.gBox{float:left; margin:0 10px;}
+	.gBox.nm{margin:0;}
+	.gfContainer{float:left; width:1140px; margin:0;}
+	.lEdge{margin-left:0;}
+	.rEdge{margin-right:0;}
+		
+		.col_2{width:170px;}
+			.col_2_5{width:205px;}
+		.col_3{width:265px;}
+		.col_4{width:360px;}
+		.col_5{width:455px;}
+		.col_6{width:550px;}
+		.col_7{width:645px;}
+		.col_8{width:740px;}
+		.col_9{width:835px;}
+		.col_10{width:930px;}
+		.col_12{width:1140px; margin:0;}
+	
+/* 
+	Main Sections
+*/
+
+	/*
+	|| Floating Navigation
+	*/
+	.pmnlFloatNav{position: fixed; top:150px;}
+	.pmnlFloatNav .accountPanel{float:left; width:320px; background: rgba(48,51,101,0.9); padding:20px 20px 10px; margin-left:-320px;}
+	.pmnlFloatNav .accountPanel.signedIn{float:left; width:200px; background: rgba(48,51,101,0.9); padding:20px 20px 15px 10px; margin-left:0px; margin-left:-200px;}
+		/* Account Panel Forms */
+		.accountPanel fieldset{border:none; padding:0; margin:0; display: none;}
+		.accountPanel legend{color:#fff; margin-bottom:10px; font-size:20px;}
+		.accountPanel input{width:260px; padding:8px 8px; margin:5px 0 10px; border-radius:3px; border:1px solid #fff; font-family: 'bankgothiclightbt',sans-serif; color:#666; }
+		.accountPanel input.error{border:1px solid #d42227;}
+		.accountPanel input[type="checkbox"]{float:left; width:auto; margin:9px 5px 0 0;}
+		.accountPanel label{float:left; margin-top:5px; font-size:14px; color:#fff;}
+		.accountPanel .inputRow{float:left; width:280px; margin-bottom:10px;}
+		.accountPanel a{font-size:14px; color:#00cebb;}
+		.accountPanel a:hover{color:#fff;}
+			.accountPanel a.fp{float:right; margin:6px 5px 0 0;}
+			.accountPanel a.llinked{float:right; margin:6px 5px 0 0; background:url(../images/icons/linkedin.png) no-repeat#fff; color:#00aeef; padding: 5px 5px 3px 28px; font-size:12px; border-radius: 3px;}
+		.accountPanel button{float:left; background:#00aeef; border-radius: 3px; border:none; cursor: pointer; color:#fff; padding:6px 10px;}
+		
+		/* Account Panel - Signed In */
+		.accountPanel.signedIn{}
+		.accountPanel.signedIn h2{margin:0; color:#fff; font-family: 'bankgothiclightbt',sans-serif; font-weight: normal; font-size:16px; border-bottom:1px solid #888; padding:0 0 8px; text-align: center;}
+		.accountPanel.signedIn ul{padding:0; margin:0;}
+		.accountPanel.signedIn ul li a{display: block; border-top:1px solid #2b3561; padding:8px 10px; color:#fff;}
+		.accountPanel.signedIn ul li:first-child a{border-top:none;}
+		
+		.accountPanel.signedIn ul li a:hover{background:#00cebb;}
+		.accountPanel.signedIn{}
+		
+	.pmnlFloatNav .panelSwitch{background:rgba(48,51,101,0.9); width:150px; text-align: center; padding:12px 0; display: block; float:right; position: relative;}
+		.panelSwitch.signedIn{width:60px;}
+		.panelSwitch a{color:#00cebb; padding:0 12px;}
+		.panelSwitch a:first-child{border-right: 1px solid #ccc;}
+			.panelSwitch.signedIn a:first-child{border-right: none;}
+		.panelSwitch a:hover{color:#fff;}
+		.panelSwitch a.closePanel{position: absolute; top:-11px; right: -22px; display: none;}
+	.pmnlFloatNav{}
+	.pmnlFloatNav .panelError{ background:#ff4f4f; width:278px; text-align: center; margin:10px 0;}
+	.pmnlFloatNav .panelError p{margin:0; font-size:12px; padding:10px; color:#fff;}
+	/*
+		Notifications
+	*/
+	.fullpageNotification{padding:8px 10px; text-align: center; margin-bottom:10px;}
+	.fullpageNotification h6{margin:0; font-size:1.1em;}
+	.fullpageNotification.Error{float:left; background:#ff4f4f; color:#fff;}
+	.fullpageNotification.Success{float:left; background:#a1f166; color:#3a5e1f;}
+
+	/*
+	|| Branding | Header
+	*/
+	.pmnlBranding{width:1200px; display:block; float:left; background:url(../images/backgrounds/brandingBG.png) no-repeat; height:113px; padding:25px 50px 0; margin-bottom:0px; position: fixed; z-index: 200;}
+	.pmnlBranding h1{float:left; margin:0 20px 0 0;}
+	.pmnlBranding nav{}
+	.pmnlBranding nav ul{float:left; margin-right: 20px}
+	.pmnlBranding nav ul li{display: inline-block; margin:0 40px 0 0;}
+	.pmnlBranding nav ul li a{font-size:18px; color:#fff; text-transform: uppercase; text-shadow:0 1px 1px #444;}
+	.pmnlBranding nav ul li a:hover{color:#00d8ff;}
+
+		/* Search Bar */
+		.pmnlSearch{padding:8px 0 0;}
+		.pmnlSearch .tField{width:300px; padding:6px; color:#888; border:1px solid #ccc;}
+		.pmnlSearch .tField:active{color:333;}
+			.pmnlSearch .tField.error{border:1px solid #d42227;}
+		.pmnlSearch .tSubmit{width:21px; height:21px; background:url(../images/icons/search.png) no-repeat transparent; text-indent: -9999px; border:none; margin:3px 5px;}
+		.pmnlSearch .tSubmit:hover{background-position: 0 -21px;}
+	
+	/*
+	|| Homepage Sections
+	*/
+		/*
+			Banner
+		*/
+		.homepageBanner{margin:-10px 0 20px;}
+		/*
+			Homepage Content
+		*/
+		.pmnlHomepage h3{color:#3d3a7e; text-transform: uppercase; margin:0;}
+		.pmnlHomepage ul{margin:20px 0; padding:0; text-align: center;}
+		.pmnlHomepage ul li{display: inline-block; margin:0 10px; padding:0; position: relative;}
+		.pmnlHomepage ul li:hover a{display: block;}
+		.pmnlHomepage ul li a{display:none;background: rgba(28,175,227,0.8); width:135px; height: 100px; -moz-box-sizing:border-box; box-sizing:border-box; padding:10px; position: absolute; z-index: 20; text-align: left;}
+			.pmnlHomepage ul li a h4{margin:0; font-size:14px; color:#fff;}
+			.pmnlHomepage ul li a h5{margin:0; font-weight: normal; color:#fff;}
+			.pmnlHomepage ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
+			.pmnlHomepage ul li a i:hover{text-decoration: underline;}
+
+	/*
+	|| Content
+	*/
+	.pmnlContent{float:left; margin-top:103px; margin-bottom:100px;}
+		/* Breadcrumbs */
+		.pmnlBreadcrumbs{float:left; margin:0 0 7px; padding:0 10px;}
+		.pmnlBreadcrumbs li{display: inline-block; text-transform: uppercase; font-size:12px; padding-right: 15px; background:url(../images/icons/rdarrow.png) no-repeat right ; margin-right:5px;}
+		.pmnlBreadcrumbs li:last-child{background:none;}
+		.pmnlBreadcrumbs li a{text-transform: uppercase;}
+		.pmnlBreadcrumbs li a:hover{text-decoration: underline;}
+
+		/* Section Navigation */
+		.pmnlSectionNav{background:#c9c8c7;}
+			
+			/* Profile Management */
+			.manageProfile{margin:0; padding:0;}
+			.manageProfile li{display: inline-block;}
+			.manageProfile li a{display:block;  color:#fff; padding:15px 25px; font-weight: bold; font-size:22px; text-transform: uppercase;}
+			.manageProfile li a:hover{background:#8fc2d6;}
+			.manageProfile li a.active{background:url(../images/backgrounds/profileManagementBG.png) no-repeat top right #82b4c7; padding-right:51px; margin-right:-26px; margin-left:-5px;}
+			.manageProfile li a.disabled{background:transparent; cursor: default;}
+			.manageProfile li a.disabled:hover{background:transparent; cursor: default;}
+			.manageProfile li:first-child a.active{background:url(../images/backgrounds/profileManagementBG.png) no-repeat top right #82b4c7; padding-right:51px; margin-right:-26px; margin-left:0px;}
+			.manageProfile li p{margin:0; font-weight: normal; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size:14px; text-transform: none;}
+			
+		/* Section Header */
+		.pmnlSectionHeader{margin:10px 0;}
+		.pmnlSectionHeader h2{text-transform:uppercase;  color:#1dafe2; margin:0; padding:25px 50px; font-size:42px; font-weight: normal;}
+		.pmnlSectionHeader .rEdge{border-left:1px solid #efefef;}
+		.pmnlSectionHeader p{padding:25px 260px 25px 70px; margin:0;}
+
+		/* Main Content */
+		.pmnlMainContent{}
+		.pmnlMainContent .leftColumn{background:#eaeae8; padding:30px 0 0; }
+			.formRow{border-bottom:1px solid #fff; padding: 30px;}
+		.pmnlMainContent .threeEights{}
+	
+
+
+		/* Forms */
+		.pmnlForms{}
+		.pmnlForms h3{color:#3d3a7e; text-transform: uppercase; margin:0 0 0px;}
+		.pmnlForms h4{color:#444;}
+		.pmnlForms h4 em{color:#999; font-weight: normal; font-size:14px; font-style: normal;}
+		.pmnlForms fieldset{border:none; margin-top:20px; padding:0;}
+		.pmnlForms p.ldesc{margin:0; padding:10px 0 0 ; color:#636466;}
+			.pmnlForms span p.ldesc{margin:0; padding:0px 0 0 ; color:#636466;}
+		.pmnlForms p.ldesc.it{font-style: italic; font-size:12px;}
+		
+			.formRow .spFF{}
+			.formRow .spFF h6{float:left; width:180px; margin:0; background:#fcfcfc; padding:10px; -moz-box-sizing:border-box; box-sizing:border-box; font-family: 'bankgothiclightbt'; font-size:14px; color:#555;}
+			.formRow .spFF .tField{width:260px !important;}
+
+			/* Photo Upload */
+			.pmnlForms .photoUploader{}
+			.pmnlForms .photoUploader label{width:150px; height:150px; background:#fff; color:#1dafe2; font-weight: bold; text-transform: uppercase; float:left; position: relative; z-index:1; text-align: center; padding:60px 20px 0; -moz-box-sizing:border-box; box-sizing:border-box; margin:0 30px 0 0;}
+			.pmnlForms .photoUploader .pu{opacity:0; width:150px; height:150px; cursor: pointer; position: absolute; top:0; left:0;}
+			
+			/* Generic Forms */
+			.pmnlForms .formRow span{}
+			.pmnlForms .formRow a.addItem{float:right; color:#00aeef; margin-top:-20px; text-transform: uppercase;}
+			.pmnlForms .formRow a.addItem.subLink{font-size:12px; text-transform: none; margin:0 0 10px;}
+			.pmnlForms .formRow input.tField{width:440px; padding:8px 6px 6px; color:#aaa; border:1px solid #ccc; font-family: 'Eurosti', sans-serif; margin:0 0 20px 0; text-transform: uppercase;}
+			.pmnlForms .formRow input.tField:active{color:#555;}
+			.pmnlForms .formRow input.tField.error{border:1px solid #d42227;}
+				.pmnlForms .formRow input.tField.twoThirds{width:310px;}
+				.pmnlForms .formRow input.tField.active{color:#444;}
+				.pmnlForms .formRow input.tField.half{width:201px; margin-right:10px;}
+			.pmnlForms .formRow select{width:450px; padding:8px 6px 6px; color:#555; border:1px solid #ccc; font-family: 'Eurosti', sans-serif; margin:0 0 20px; text-transform: uppercase;}	
+			.pmnlForms .formRow span select{width:auto;}
+				.formRow span .timeSpan{float:left; width:226px;}
+				.formRow span .timeSpan h4{margin:0 0 5px !important; padding:0; text-transform: uppercase; } 
+			.pmnlForms .formRow .submitData{float:right; margin:20px 5px 0 0; border-radius:4px; background:url(../images/icons/check.png) no-repeat 88% center #00aeef; padding:8px 42px 8px 15px; border:none; color:#fff; font-size:20px;}
+
+				/*Edit Form for Album Titles*/	
+				.pmnlForms .formRow .titleForm{display: none;}
+				.pmnlForms .formRow .titleForm .tField{float:left; margin:10px 0; width:305px;}
+				.pmnlForms .formRow .titleForm .submitData{float:left; margin:10px 0 0 10px ; padding:6px 42px 6px 10px;}
+
+				/*Edit Form for Album Items*/
+				.pmnlForms .formRow .itemEdit{display:none;}
+				.pmnlForms .formRow .itemEdit input{float:left; width:340px; padding:3px; -moz-box-sizing:border-box; box-sizing:border-box; margin:8px 0; border:1px solid #ccc;}
+				.pmnlForms .formRow .itemEdit textarea{float:left; width:340px; padding:3px; -moz-box-sizing:border-box; box-sizing:border-box; margin:0px; border:1px solid #ccc;}
+				.pmnlForms .formRow .itemEdit button{margin:10px 5px;}
+
+
+			.pmnlForms .formRow .expPrompt{margin:15px 0 0;}
+			.pmnlForms .formRow .expPrompt a{background:#00aeef; color:#fff; padding:7px 11px; font-size:12px;}
+			.pmnlForms .formRow .submitData:hover{background:url(../images/icons/check.png) no-repeat 88% center #1bbdfa;}
+			.pmnlForms .formRow .submitItem{float:right; margin:0px 0px 10px 0; border-radius:4px; background:#00aeef; padding:8px 15px; border:none; color:#fff; font-size:14px;}
+			.pmnlForms .formRow .genericBtn{float:left; margin:20px 10px 10px 0; border-radius:4px; background:#00aeef; padding:8px 15px; border:none; color:#fff; font-size:14px; font-size:20px;}
+			.pmnlForms .formRow .submitItem:hover, .pmnlForms .formRow .genericBtn:hover{background: #1bbdfa;}
+			/* Adding Item Accordion*/
+			.pmnlForms .formRow .addItemFields{float:left; background:#f5f5f5; padding:20px 15px 0; margin-left:-15px; border-radius:6px; box-shadow: 0 3px 0 #ddd; margin-bottom:20px; display:none;}
+			.addItemFields textarea{border:1px solid #ccc; margin:0 0 15px; width:454px; -moz-box-sizing:border-box; box-sizing:border-box; outline: none; padding:5px; color:#aaa;}
+			.addItemFields textarea.active{color:#444;}
+
+
+			/* For Checkboxes and Radio Buttons */
+			.pmnlForms .formRow .checkNradio{float:left; margin-bottom:25px; width:400px;}
+			.pmnlForms .formRow .checkNradio h4, .pmnlForms .formRow span h4{margin:25px 0 10px 5px; font-size:18px; color:#333;}
+			.pmnlForms .formRow .checkNradio label{float:left; margin:2px 35px 0 0 ; color:#444;}
+			.pmnlForms .formRow .checkNradio ul{margin:0; padding: 0;}
+			.pmnlForms .formRow .checkNradio ul li{display: inline-block; margin-bottom:10px;}
+			.pmnlForms .formRow .checkNradio ul li label{margin-right: 15px;}
+	
+			/*
+				Listed Info
+			*/
+			.listedInfo{margin:15px 0; padding:0;}
+			.listedInfo li{border-bottom:1px solid #bbb; padding:0 0 15px; margin-bottom:16px;}
+			.listedInfo li span h4{margin:0 0 2px !important; padding:0; font-size:18px;}
+			.listedInfo li span h5{margin:0 0 2px; font-size:16px; text-transform: uppercase; color:#666;}
+			.listedInfo li span p{margin:0 0 3px; color:#666;}
+			.listedInfo li nav{float:right; margin:-20px 0 10px;}
+
+			/* Form Error Notifications */
+			.errorBox{background:#ff4f4f; padding:12px 15px 10px; border-radius:4px; margin-left:20px; color:#fff;}
+			.errorBox h5{margin:0 0 5px;}
+			.errorBox ul{margin:0; padding:0 0 0 20px; }
+			.errorBox ul li{list-style: square; font-size:12px;}
+	/*
+	|| Sidebar
+	*/
+
+		/* Profile Management / Progress Sidebar */
+		.progressBars{padding:0; margin:30px 0 0; position: relative;}
+		.progressBars li{position: relative; display: block; float:left; width:100%; margin-bottom:70px;}
+		.progressBars li h5{font-family: 'Eurosti',sans-serif; text-transform: uppercase; font-size:16px; margin:0; color:#00aeef;}
+		.progressBars li div{display:block; position:absolute; top:25px; width:100%; padding:10px 10px; height:40px; border-radius:3px;}
+		.progressBars li div.progress{background:#00aeef; z-index:5; color:#fff;}
+		.progressBars li div.bg{background:#eaeae8; color:#999; z-index:4;}
+		
+		/* Portfolio Albums */
+		.albumList{float:left; margin:10px 0 0; padding:0; }
+		.albumList li{background:#f9f9f9; padding:12px; display: block; border-radius:4px; float:left; width:430px; margin-bottom:8px; box-shadow: 0 3px 0 #dadada;}
+		.albumList li.drag_in{background:#cef2ff;}
+		.albumList li h4{margin:0 0 2px; border-bottom: 1px solid #eee; padding-bottom: 10px;}
+		.albumList li nav{float:right; margin:-27px 0 10px;}
+		.albumList li nav a{margin-left:5px;}
+		.albumList li ul{margin:0; padding:0; float:left; width:430px;}
+		.albumList li ul li{padding:8px 8px 0; background:#fcfcfc; width:412px; border:1px dashed #ddd; margin-bottom:3px; box-shadow: none; display: block; position: relative;}
+		.albumList li ul li .cb{position: absolute; top:10px; left:10px;}
+		.albumList li ul li img{padding:0px 8px 8px 0; float:left;}
+		.albumList li ul li h5{margin:10px 0 0; color:#666;}
+		.albumList li ul li p{margin:2px 0 0; font-size:12px; color:#999;}
+		.albumList li ul li nav{float:right; margin:-40px -20px 0 0;}
+		
+		.albumList .albumControls{float:left;padding:6px 0 6px 2px; font-size:12px;  margin-bottom:5px; text-align: center; position: relative; width:430px;}
+		.albumList .albumControls a{float:left; background:#00aeef; color:#fff; padding:3px 5px; border-radius: 3px;}
+		.albumList .albumControls a.del{ background:#f38484;}
+		.albumList .albumControls a:hover{background: #12bbfa;}
+		.albumList .albumControls a.del:hover{background: #fb6868;}
+		.albumList .albumControls label{position: relative; z-index: 20;}
+		.albumList .albumControls input.addAItem{ width:100px; cursor: pointer; margin-top:5px;}
+		.albumList .albumControls select{float:left; font-family: Helvetica, sans-serif; text-transform: none; margin:0 8px; padding:1px 3px;}
+/*
+	Footer
+*/
+.pmnlFooter{width:1200px; display:block; float:left; background:url(../images/backgrounds/footerBG.png) no-repeat; height:50px; padding:0; position:fixed; bottom:0; z-index: 200;}
+.pmnlFooter .leftNav{margin:0; padding:0; float:left;}
+	.pmnlFooter .leftNav li{display: inline-block; margin:0; padding:0;}
+	.pmnlFooter .leftNav li a{padding:18px 20px; display:block; color:#fff; border-left:1px solid #114776; font-weight: bold; font-size:14px;}
+	.pmnlFooter .leftNav li:first-child a{border-left-width: 0px;}
+	.pmnlFooter .leftNav a:hover{color:#00d8ff;}
+.pmnlFooter .rightNav{margin:0; padding:0; float:right;}
+	.pmnlFooter .rightNav li{display: inline-block; margin:0; padding:0;}
+	.pmnlFooter .rightNav li a{padding:10px 15px 14px; display:block; color:#fff; font-weight: bold; font-size:14px;}
+	.pmnlFooter .rightNav li a.cp{font-size:12px; padding-top:12px;}
+	.pmnlFooter .rightNav li a.cp i{font-style:normal; font-weight: normal; color:#017bc8;}
+
+
+
+	

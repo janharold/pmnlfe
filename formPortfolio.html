@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PortfolioMNL</title>
+	<link rel="stylesheet" href="css/pmnlStyle.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+</head>
+<body>
+	<!-- this Portion is Reserved for Modal and Floating Navigation -->
+	<div class="modalBox"></div>
+	<div class="pmnlFloatNav"></div>
+
+	<div class="centerWrap">
+		<div class="floatWrap">
+
+
+			<div class="pmnlBranding">
+				<h1><a href="index.html"><img src="images/branding/portfolioMNL_logo.png" alt="PortfolioMNL Logo"></a></h1>
+				<nav>
+					<ul class="bankGothic">
+						<li><a href="#">Portfolios</a></li>
+						<li><a href="#">Job Listings</a></li>
+					</ul>
+				</nav>
+				<form class="pmnlSearch" action="">
+					<input type="text" class="tField bankGothic" value="search">
+					<input type="submit" class="tSubmit" value="go">
+				</form>
+			</div>
+			<!-- 
+				I N N E R   W R A P
+				Breadcrumbs, Content
+			-->
+			<div class="innerWrap">
+				<div class="pmnlContent">
+					<ul class="pmnlBreadcrumbs">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Subpage</a></li>
+						<li>Current Page</li>
+					</ul>
+					<div class="gfContainer pmnlSectionNav">
+						<ul class="manageProfile">
+							<li><a href="formPortfolio.html" class="euroStile active">Portfolio Uploader<p>Show, Don't Just Tell</p></a></li>
+							<li><a href="formProfile.html" class="euroStile">Profile<p>Your Personal Brand</p></a></li>
+							<li><a href="formResume.html" class="euroStile">Resume Builder<p>What's Your History?</p></a></li>
+							
+							<li><a href="#" class="euroStile disabled">Complete Steps 1,2,3<p>To publish your portfolio</p></a></li>
+						</ul>
+					</div>
+					<div class="gfContainer pmnlSectionHeader">
+						<div class="gBox col_12 fullpageNotification Error">
+							<h6>Woohooo! Sorry.</h6>
+						</div>
+						<div class="gBox col_12 fullpageNotification Success">
+							<h6>Woohooo! Yehey!</h6>
+						</div>
+						<div class="gBox lEdge col_6">
+							<h2 class="euroStile">Portfolio Uploader</h2>
+						</div>
+						<div class="gBox rEdge col_6">
+							<p class="euroStile">Complete your personal and career information to access the full PortfolioMNL experience.</p>
+						</div>
+					</div> 
+					<div class="gfContainer pmnlMainContent">
+
+						<div class="gBox lEdge col_8 leftColumn pmnlForms">
+							<form action="">
+								
+								<!-- Start Album Creation -->
+								<div class="gBox nm col_8 formRow">
+									<div class="gBox nm col_5 ">
+										<h3 class="euroStile">Create New Album</h3>
+										<p class="ldesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iste eius neque illum reiciendis facere laborum harum repellendus ullam.
+											</p>
+										<fieldset>
+											<input type="text" class="tField col_8" value="Album Name">
+											<button type="submit" class="submitItem">Create Album</button>
+										</fieldset>
+									</div>
+								</div>
+								<!-- 
+									End Album Creation 
+									Album List
+								-->
+								<div class="gBox nm col_8 formRow">
+									<div class="gBox nm col_5 ">
+										<h3 class="euroStile">Your Albums</h3>
+										<p class="ldesc">You don't have any album yet.</p>
+										<ul class="albumList">
+											<li>
+												<div class="albumHeader">
+													<h4>Album Name</h4>
+													<nav>
+														<a href="#" class="collapseAlbum"><img src="images/icons/minus.png" alt="Collapse"></a>
+														<a href="#" class="editAlbumName"><img src="images/icons/edit.png" alt="Edit" ></a>
+
+														<a href="#"><img src="images/icons/x.png" alt="Delete"></a>
+													</nav>
+												</div>
+												<div class="titleForm">
+													
+														<input type="text" class="tField">
+														<button type="submit" class="submitData titleEdit">Done</button>
+													
+												</div>	
+												<div class="albumContent">
+													<span class="albumControls">
+														<a href="#">Select All</a>
+
+														<select name="" id="">
+															<option value="#">Move to:</option>
+															<option value="#">Album 2</option>
+															<option value="#">Album 3</option>
+														</select>
+														<a href="#" class="del">Delete</a>
+														
+													</span>
+													<ul>
+														<li>
+															<input type="checkbox" class="cb">
+															<img src="images/samples/thumb90x90.png" alt="" width="60">
+															<div class="itemDetails">
+																<h5>Untitled artwork</h5>
+																<p>Make sure to edit me!</p>
+																<nav>
+																	<a href="#" class="editItem"><img src="images/icons/edit.png" alt="Edit" width="12"></a>
+																	<a href="#"><img src="images/icons/x.png" alt="Delete" width="12"></a>
+																</nav>
+															</div>
+															<div class="itemEdit">
+																<input type="Text">
+																<textarea rows="5"></textarea>
+																<button class="submitData doneEditItem">Done</button>
+															</div>		
+														</li>
+														<li>
+															<input type="checkbox" class="cb">
+															<img src="images/samples/thumb90x90.png" alt="" width="60">
+															<div class="itemDetails">
+																<h5>Untitled artwork</h5>
+																<p>Make sure to edit me!</p>
+																<nav>
+																	<a href="#" class="editItem"><img src="images/icons/edit.png" alt="Edit" width="12"></a>
+																	<a href="#"><img src="images/icons/x.png" alt="Delete" width="12"></a>
+																</nav>
+															</div>
+															<div class="itemEdit">
+																<input type="Text">
+																<textarea rows="5"></textarea>
+																<button class="submitData doneEditItem">Done</button>
+															</div>		
+														</li>
+													</ul>
+												</div>
+											</li>
+											
+										</ul>
+										<a href="#" class="genericBtn">Preview</a>
+										<a href="#" class="genericBtn">Save as Draft</a>
+										<button type="submit" class="submitData">Publish </button>
+									</div>
+								</div>
+								
+							</form>
+						
+						</div>
+
+
+						<div class="gBox rEdge oneThird">
+							<ul class="progressBars">
+								<li>
+									<h5>Profile</h5>
+									<div class="progress" style="width:44%;">44%</div>
+									<div class="bg"></div>
+								</li>
+								<li>
+									<h5>Resume</h5>
+									<div class="progress" style="width:77%;">77%</div>
+									<div class="bg"></div>
+								</li>
+								<li>
+									<h5>Search Optimization</h5>
+									<div class="progress" style="width:0%; padding:0;"></div>
+									<div class="bg">0%</div>
+								</li>
+							</ul>	
+						</div>
+
+
+					</div>
+				</div>
+				
+			</div>
+		
+			<div class="pmnlFooter">
+					<ul class="leftNav">
+						<li><a href="#">How MNL Works</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#"><img src="images/icons/email_white.png" alt=""></a></li>
+					</ul>
+					<ul class="rightNav">
+						<li><a href="#"><img src="images/icons/facebook_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/twitter_white.png" alt=""></a></a></li>
+						<li><a href="#"><img src="images/icons/pinterest_white.png" alt=""></a></a></li>
+						<li ><a href="#" class="cp">© 2013 PortfolioMNL. All rights reserved.<br>
+<i>Terms of Use & Privacy Policy</i></a></li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$('.creativeFields').multiSelect();
+		$('.avCB').iCheck({
+			checkboxClass: 'icheckbox_square-blue',
+			radioClass: 'iradio_square-blue'
+		});
+		var tempString = '';
+		$('.addItem').click(function(e){
+			
+			if($(this).is(':contains("Add")')){
+				tempString = $(this).text();
+				$(this).text('Cancel');
+			}else if($(this).is(':contains("Cancel")')){
+				$(this).text(tempString);
+			}
+			$(this).parent().find('.addItemFields').slideToggle('700');
+			e.preventDefault();
+		});
+
+		$('.collapseAlbum').click(function(e){
+			var cAlbum = $(this).parent().parent().parent().find('.albumContent');
+			if(cAlbum.is(":visible")){
+				$(this).find('img').attr('src', 'images/icons/maximize.png');
+			}else{
+				$(this).find('img').attr('src', 'images/icons/minus.png');
+			}
+			cAlbum.slideToggle(450);
+			e.preventDefault();
+		});
+
+		//Editing Album Name
+		var tempTitleName = '';
+		$('.editAlbumName').click(function(e){
+			var dtitleText = $(this).parent().parent().find('h4').text();
+			var dAlbumHeader = $(this).parent().parent().parent().find('.albumHeader');
+			var dAlbumTitle = $(this).parent().parent().parent().find('.titleForm');
+			
+			dAlbumTitle.find('input').attr('value', dtitleText);
+			dAlbumTitle.slideToggle(100);
+			dAlbumHeader.slideToggle(100);
+
+			e.preventDefault();
+		});
+		//Submitting New Album Title
+		$('.titleEdit').click(function(e){
+			var eAlbumHeader = $(this).parent().parent().find('.albumHeader');
+			var eAlbumTitle = $(this).parent().parent().find('.titleForm');
+			var editedName = eAlbumTitle.find('input').val();
+			
+			$(this).parent().parent().find('h4').text(editedName);
+
+			eAlbumTitle.slideToggle(100);
+			eAlbumHeader.slideToggle(100);
+			console.log('')
+			e.preventDefault();
+		});
+
+		//Editing Items
+		$('.editItem').click(function(e){
+			var fItemEditForm = $(this).parent().parent().parent().find('.itemEdit');
+			var fItemDescription = $(this).parent().parent().parent().find('.itemDetails');
+				var fitemTitle = fItemDescription.find('h5').text();
+				var fitemDesc = fItemDescription.find('p').text();
+
+				fItemEditForm.find('input').attr('value', fitemTitle);
+				fItemEditForm.find('textarea').val(fitemDesc);
+
+			fItemEditForm.slideToggle(100);
+			fItemDescription.slideToggle(100);
+			e.preventDefault();
+		});
+
+		$('.doneEditItem').click(function(e){
+			var gitemTitle = $(this).parent().find('input').val();
+			var gitemDesc = $(this).parent().find('textarea').val();
+			var gformHolder = $(this).parent();
+			var gItemDescription = $(this).parent().parent().find('.itemDetails');
+				gItemDescription.find('h5').text(gitemTitle);
+				gItemDescription.find('p').text(gitemDesc);
+			gformHolder.slideToggle(100);
+			gItemDescription.slideToggle(100);
+			e.preventDefault();
+		});
+
+	</script>
+</body>
+</html>
