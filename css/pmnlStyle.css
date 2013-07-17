@@ -316,6 +316,7 @@
 
 	/* List Filter*/
 	.listFilters{padding:20px 50px 10px; ;}
+		.col_9 .listFilters{padding:20px 10px 10px; ;}
 	.listFilters a{background:#eee url(../images/icons/x.png) no-repeat 90% 7px; padding:5px 30px 5px 10px; }
 
 	/* Featured Jobs */
@@ -326,9 +327,12 @@
 	/* Job Listing */
 	.pmnlJobList{}
 	.pmnlJobList h3{font-size:1.4em; font-family: 'Eurosti'; margin:0; color:#777; text-transform: uppercase; margin:30px 50px 0px; border-bottom:4px solid #ccc; padding-bottom:10px;}
+		.col_9.pmnlJobList h3{margin:30px 10px 0;}
 	.pmnlJobList ul{margin:0; padding:0 50px 40px;}
+		.col_9.pmnlJobList ul{margin:0; padding:0 10px 40px;}
 	.pmnlJobList ul li{padding:20px 0 20px; border-bottom:1px solid #ececec;}
 	.pmnlJobList ul li h3{font-size:1.2em; font-family: 'Eurosti'; margin:0; color:#777; border-bottom: none; padding:0;}
+		.col_9.pmnlJobList ul li h3{font-size:1.2em; font-family: 'Eurosti'; margin:0; color:#777; border-bottom: none; padding:0;}
 	.pmnlJobList ul li h3 a{text-transform: uppercase; color:#1cafe3;}
 	.pmnlJobList ul li h3 a:hover{color:#317690;}
 	.pmnlJobList ul li h3 em{float:right; font-style: normal; font-size:0.7em;}
@@ -344,6 +348,18 @@
 		.joblistPagination a.disabled{background:#fff; cursor: default;}
 		.joblistPagination a.disabled:hover{background:#fff; cursor: default; color:#333;}
 		.joblistPagination a:hover{background:#1cafe3; color:#fff;}
+
+		/* Jobs Sidebar */
+		.jobsSidebar{}
+		.jobsSidebar h4{font-size:1em; color:#777; font-family: 'Eurosti'; text-transform: uppercase; text-align: center;}
+		.jobsSidebar ul{margin:20px 0; padding:0;}
+		.jobsSidebar ul li{ margin:0 30px 20px 65px; padding:0; position: relative; width:140px;}
+		.jobsSidebar ul li:hover a{display: block;}
+		.jobsSidebar ul li a{display:none;background: rgba(28,175,227,0.8); width:135px; height: 100px; -moz-box-sizing:border-box; box-sizing:border-box; padding:10px; position: absolute; z-index: 20; text-align: left;}
+			.jobsSidebar ul li a h4{margin:0; font-size:14px; color:#fff; text-transform: none; font-family: Helvetica, sans-serif;}
+			.jobsSidebar ul li a h5{margin:0; font-weight: normal; color:#fff;}
+			.jobsSidebar ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
+			.jobsSidebar ul li a i:hover{text-decoration: underline;}
 /*
 	Footer
 */
