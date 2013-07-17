@@ -41,11 +41,10 @@
 						<li><a href="#">Subpage</a></li>
 						<li>Current Page</li>
 					</ul>
-
 					<div class="gfContainer pmnlSectionNav">
 						<ul class="manageProfile">
-							<li><a href="jobpostPurchase.html" class="euroStile active">Choose<p>Select a Package</p></a></li>
-							<li><a href="formPayment.html" class="euroStile ">Payment<p>Lorem Ipsum</p></a></li>
+							<li><a href="jobpostPurchase.html" class="euroStile">Choose<p>Select a Package</p></a></li>
+							<li><a href="formPayment.html" class="euroStile active">Payment<p>Lorem Ipsum</p></a></li>
 							<li><a href="#" class="euroStile">Fill Out<p>Forms</p></a></li>
 							
 						</ul>
@@ -64,49 +63,73 @@ sign-in to get on your way.</p>
 							<a href="#">Sign In</a>
 						</div>
 					</div> 
+					<div class="gfContainer pmnlMainContent">
 
-					<div class="gfContainer jobpostPurchase">
-						<ul>
-							<li class="qp">
-								<h3>Quick Post</h3>
-								<h4>₱ 499</h4>
-								<p>Need a freelancer yesterday? Post a job listing for 5 days. ‘Cuz next week, it’ll be too late.</p>
-								<a href="#">Purchase</a>
-							</li>
-							<li>
-								<h3>Single Post</h3>
-								<h4>₱ 4999</h4>
-								<p>Our job listings have lasting power. Not just one...but 2 months! Single posts lasts 60 days.</p>
-								<a href="#">Purchase</a>
-							</li>
-							<li>
-								<h3>6 Posts</h3>
-								<h4>₱ 25,499</h4>
-								<p>Pre pay 6 single posts. Each post lasts 60 days and never 
-expires. <br><em>Save %15!</em></p>
-								<a href="#">Purchase</a>
-							</li>
-							<li>
-								<h3>12 Posts</h3>
-								<h4>₱ 44,999</h4>
-								<p>Pre pay 12 single posts. Each post lasts 60 days and never expires.  <br><em>Save %25!</em></p>
-								<a href="#">Purchase</a>
-							</li>
-						</ul>
-					</div>
-					<div class="gfContainer jobConcierge">
-						<div class="gBox col_4">
-							<h5>CORPORATE PASSPORT</h5>
-						</div>
-						<div class="gBox col_6">
-							<h6>Unlimited job posts + PREMIERE brand presence</h6>
-							<p>Does your business do frequent hiring? Want your company to stand out from the crowd? Maximize hiring power and brand presence, within and beyond PortfolioMNL. For more information, contact our Corporate Concierge today.</p>
-							<div class="col_3">
-							<a href="#">CONTACT CONCIERGE </a>
+						<div class="gBox lEdge col_9 leftColumn pmnlForms">
+							<div class="gBox nm col_9 formRow purchaseForm">
+								<div class="gBox col_8">
+									<h3 class="euroStile">Summary of Order</h3>
+									<nav class="svp">
+										<a href="#">Save as PDF</a>
+										<a href="#">Print</a>
+									</nav>
+									<ul class="receiptDetails">
+										<li>Juan Dela Cruz</li>
+										<li>Manila, Philippines</li>
+										<li>juan.delacruz@mail.com</li>
+										<li>0917 8100000</li>
+										<li>TIN Number</li>
+										<li>Receipt Number</li>
+									</ul>
+									<table>
+										<tr>
+											<th width="75%">Item</th>
+											<th width="25%">Price</th>
+										</tr>
+										<tr>
+											<td>12 Slots</td>
+											<td>P 42,999</td>
+										</tr>
+										<tr>
+											<td>12% VAT</td>
+											<td>P 5,999</td>
+										</tr>
+									</table>
+									<p class="note">Have a coupon code? Enter your PortfolioMNL discount or coupon code here.</p>
+									<input type="text" class="dcCoupon">
+									<p class="total">Total Amount <em>P48,888</em></p>
+									<nav class="svp">
+										<a href="#">Save as PDF</a>
+										<a href="#">Print</a>
+									</nav>
+								</div>
+							</div>
+							<div class="gBox nm col_9 formRow purchaseForm purchaseLogin">
+								<h4>Proceed to checkout?</h4>
+								<div class="gBox lEdge col_4 loginForm">
+									<h5>Create an Account</h5>
+									<input type="text" value="Contact Person">
+									<input type="text" value="Email Address">
+									<button>Join</button>
+								</div>
+								<div class="gBox rEdge col_4 loginForm">
+									<h5>Already Have an Account</h5>
+									<input type="text" value="Email Address">
+									<input type="text" value="Password">
+									<button>Sign In</button>
+								</div>
 							</div>
 						</div>
+
+
+						<div class="gBox rEdge col_3">
+							<h4>Hello, Guest!</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquam dignissimos debitis quae quisquam quaerat alias eligendi atque velit quasi commodi similique rem tempora doloremque sunt sit eos sint ratione.</p>
+						</div>
+					
+
 					</div>
-				</div>	
+				</div>
 				
 			</div>
 		
@@ -130,33 +153,15 @@ expires. <br><em>Save %15!</em></p>
 	</div>
 
 	<script type="text/javascript">
-	// Filter
-	$('.joblistFilter li a.mainBtn').each(function(){
-	    var menu = $(this).parent().find('ul');
-	    $(this).click(function(){
-	    	menu.fadeToggle(200);
-	    });
+		$('.creativeFields').multiSelect();
 
-	    $(menu).hover(
-	        function(){},
-	        function(){
-	            menu.fadeToggle(200);
-	        }
-	    );
-	});
-
-	$('.joblistFilter li ul li a').each(function(){
-		
-		$(this).click(function(){
-			var filterText = $(this).text();
-			var mainFilter = $(this).parent().parent().parent().find('a.mainBtn');
-			var swapFilter = $(this).parent().parent().parent().find('a.mainBtn').text();
-
-			mainFilter.text(filterText); 
-			$(this).text(swapFilter);
+		$('.genderRadio').iCheck({
+			checkboxClass: 'icheckbox_square-blue',
+			radioClass: 'iradio_square-blue'
 		});
-	});
-
+		$('.genderRadio').on('ifChecked', function(event){
+  			alert(event.type + ' callback');
+		});
 	</script>
 </body>
 </html>
