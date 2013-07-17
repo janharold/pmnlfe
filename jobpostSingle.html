@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PortfolioMNL</title>
+	<link rel="stylesheet" href="css/pmnlStyle.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+</head>
+<body>
+	<!-- this Portion is Reserved for Modal and Floating Navigation -->
+	<div class="modalBox"></div>
+	<div class="pmnlFloatNav"></div>
+
+	<div class="centerWrap">
+		<div class="floatWrap">
+
+
+			<div class="pmnlBranding">
+				<h1><a href="index.html"><img src="images/branding/portfolioMNL_logo.png" alt="PortfolioMNL Logo"></a></h1>
+				<nav>
+					<ul class="bankGothic">
+						<li><a href="#">Portfolios</a></li>
+						<li><a href="#">Job Listings</a></li>
+					</ul>
+				</nav>
+				<form class="pmnlSearch" action="">
+					<input type="text" class="tField bankGothic" value="search">
+					<input type="submit" class="tSubmit" value="go">
+				</form>
+			</div>
+			<!-- 
+				I N N E R   W R A P
+				Breadcrumbs, Content
+			-->
+			<div class="innerWrap">
+				<div class="pmnlContent">
+					<ul class="pmnlBreadcrumbs">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Subpage</a></li>
+						<li>Current Page</li>
+					</ul>
+					<div class="gfContainer jobpostSingle">
+						<div class="col_9">
+							<img src="images/samples/samplejobBanner.png" alt="">
+						</div>
+						<div class="col_3">
+							
+						</div>
+					</div>
+				</div>	
+				
+			</div>
+		
+			<div class="pmnlFooter">
+					<ul class="leftNav">
+						<li><a href="#">How MNL Works</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#"><img src="images/icons/email_white.png" alt=""></a></li>
+					</ul>
+					<ul class="rightNav">
+						<li><a href="#"><img src="images/icons/facebook_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/twitter_white.png" alt=""></a></a></li>
+						<li><a href="#"><img src="images/icons/pinterest_white.png" alt=""></a></a></li>
+						<li ><a href="#" class="cp">© 2013 PortfolioMNL. All rights reserved.<br>
+<i>Terms of Use & Privacy Policy</i></a></li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	// Filter
+	$('.joblistFilter li a.mainBtn').each(function(){
+	    var menu = $(this).parent().find('ul');
+	    $(this).click(function(){
+	    	menu.fadeToggle(200);
+	    });
+
+	    $(menu).hover(
+	        function(){},
+	        function(){
+	            menu.fadeToggle(200);
+	        }
+	    );
+	});
+
+	$('.joblistFilter li ul li a').each(function(){
+		
+		$(this).click(function(){
+			var filterText = $(this).text();
+			var mainFilter = $(this).parent().parent().parent().find('a.mainBtn');
+			var swapFilter = $(this).parent().parent().parent().find('a.mainBtn').text();
+
+			mainFilter.text(filterText); 
+			$(this).text(swapFilter);
+		});
+	});
+
+	</script>
+</body>
+</html>
