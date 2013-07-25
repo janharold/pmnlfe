@@ -7,11 +7,51 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
 	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
 </head>
 <body>
 	<!-- this Portion is Reserved for Modal and Floating Navigation -->
 	<div class="modalBox"></div>
-	<div class="pmnlFloatNav"></div>
+	<div class="pmnlFloatNav">
+		<div class="accountPanel">
+			<form action="">
+				<fieldset class="loginForm">
+					<legend class="euroStile">Welcome Back!</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<span class="inputRow">
+						<input type="checkbox"><label for="">Remember Me</label>
+						<a href="#" class="fp">Forgot Password</a>
+					</span>
+					<span class="inputRow">
+						<button type="submit" class="signin">Back for More</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+
+
+				<fieldset class="signupForm">
+					<legend class="euroStile">Welcome to our community.
+We’re delighted to have you.</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<input type="text" value="confirm password">
+					
+					<span class="inputRow">
+						<button type="submit" class="join">Join the Fun</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+			</form>
+			<div class="panelError">
+				<p>This is an error prompt.</p>
+			</div>
+		</div>
+		<nav class="panelSwitch">
+			<a href="#" class="bankGothic signupBTN">join</a><a href="#" class="bankGothic loginBTN">login</a>
+			<a href="#" class="closePanel"><img src="images/icons/close.png" alt=""></a>
+		</nav>
+	</div>
 
 	<div class="centerWrap">
 		<div class="floatWrap">
@@ -61,7 +101,7 @@ sign-in to get on your way.</p>
 							
 						</div>
 						<div class="gBox rEdge col_2">
-							<a href="#">Sign In</a>
+							<a href="#" class="job">Sign In</a>
 						</div>
 					</div> 
 
@@ -118,6 +158,7 @@ expires. <br><em>Save %15!</em></p>
 						<li><a href="#"><img src="images/icons/email_white.png" alt=""></a></li>
 					</ul>
 					<ul class="rightNav">
+						<li><a href="#"><img src="images/icons/linkedin_white.png" alt=""></a></li>
 						<li><a href="#"><img src="images/icons/facebook_white.png" alt=""></a></li>
 						<li><a href="#"><img src="images/icons/twitter_white.png" alt=""></a></a></li>
 						<li><a href="#"><img src="images/icons/pinterest_white.png" alt=""></a></a></li>
@@ -129,34 +170,5 @@ expires. <br><em>Save %15!</em></p>
 		</div>
 	</div>
 
-	<script type="text/javascript">
-	// Filter
-	$('.joblistFilter li a.mainBtn').each(function(){
-	    var menu = $(this).parent().find('ul');
-	    $(this).click(function(){
-	    	menu.fadeToggle(200);
-	    });
-
-	    $(menu).hover(
-	        function(){},
-	        function(){
-	            menu.fadeToggle(200);
-	        }
-	    );
-	});
-
-	$('.joblistFilter li ul li a').each(function(){
-		
-		$(this).click(function(){
-			var filterText = $(this).text();
-			var mainFilter = $(this).parent().parent().parent().find('a.mainBtn');
-			var swapFilter = $(this).parent().parent().parent().find('a.mainBtn').text();
-
-			mainFilter.text(filterText); 
-			$(this).text(swapFilter);
-		});
-	});
-
-	</script>
 </body>
 </html>

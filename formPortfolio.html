@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
 	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
 </head>
 <body>
 	<!-- this Portion is Reserved for Modal and Floating Navigation -->
@@ -29,6 +30,13 @@
 					<input type="text" class="tField bankGothic" value="search">
 					<input type="submit" class="tSubmit" value="go">
 				</form>
+				<div class="stickerPost">
+					<h4><a href="#">Post a Job!</a></h4>
+					<a href="#">
+						<h5>Senior Graphic A..</h5>
+						<h6>Company Name</h6>
+					</a>
+				</div>
 			</div>
 			<!-- 
 				I N N E R   W R A P
@@ -104,7 +112,10 @@
 													
 												</div>	
 												<div class="albumContent">
+													<label for="" class="dropZone">Drop Images here or <i>Select Files</i> to Upload <input type="file"></label>
+													
 													<span class="albumControls">
+
 														<a href="#">Select All</a>
 
 														<select name="" id="">
@@ -210,91 +221,5 @@
 
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		$('.creativeFields').multiSelect();
-		$('.avCB').iCheck({
-			checkboxClass: 'icheckbox_square-blue',
-			radioClass: 'iradio_square-blue'
-		});
-		var tempString = '';
-		$('.addItem').click(function(e){
-			
-			if($(this).is(':contains("Add")')){
-				tempString = $(this).text();
-				$(this).text('Cancel');
-			}else if($(this).is(':contains("Cancel")')){
-				$(this).text(tempString);
-			}
-			$(this).parent().find('.addItemFields').slideToggle('700');
-			e.preventDefault();
-		});
-
-		$('.collapseAlbum').click(function(e){
-			var cAlbum = $(this).parent().parent().parent().find('.albumContent');
-			if(cAlbum.is(":visible")){
-				$(this).find('img').attr('src', 'images/icons/maximize.png');
-			}else{
-				$(this).find('img').attr('src', 'images/icons/minus.png');
-			}
-			cAlbum.slideToggle(450);
-			e.preventDefault();
-		});
-
-		//Editing Album Name
-		var tempTitleName = '';
-		$('.editAlbumName').click(function(e){
-			var dtitleText = $(this).parent().parent().find('h4').text();
-			var dAlbumHeader = $(this).parent().parent().parent().find('.albumHeader');
-			var dAlbumTitle = $(this).parent().parent().parent().find('.titleForm');
-			
-			dAlbumTitle.find('input').attr('value', dtitleText);
-			dAlbumTitle.slideToggle(100);
-			dAlbumHeader.slideToggle(100);
-
-			e.preventDefault();
-		});
-		//Submitting New Album Title
-		$('.titleEdit').click(function(e){
-			var eAlbumHeader = $(this).parent().parent().find('.albumHeader');
-			var eAlbumTitle = $(this).parent().parent().find('.titleForm');
-			var editedName = eAlbumTitle.find('input').val();
-			
-			$(this).parent().parent().find('h4').text(editedName);
-
-			eAlbumTitle.slideToggle(100);
-			eAlbumHeader.slideToggle(100);
-			console.log('')
-			e.preventDefault();
-		});
-
-		//Editing Items
-		$('.editItem').click(function(e){
-			var fItemEditForm = $(this).parent().parent().parent().find('.itemEdit');
-			var fItemDescription = $(this).parent().parent().parent().find('.itemDetails');
-				var fitemTitle = fItemDescription.find('h5').text();
-				var fitemDesc = fItemDescription.find('p').text();
-
-				fItemEditForm.find('input').attr('value', fitemTitle);
-				fItemEditForm.find('textarea').val(fitemDesc);
-
-			fItemEditForm.slideToggle(100);
-			fItemDescription.slideToggle(100);
-			e.preventDefault();
-		});
-
-		$('.doneEditItem').click(function(e){
-			var gitemTitle = $(this).parent().find('input').val();
-			var gitemDesc = $(this).parent().find('textarea').val();
-			var gformHolder = $(this).parent();
-			var gItemDescription = $(this).parent().parent().find('.itemDetails');
-				gItemDescription.find('h5').text(gitemTitle);
-				gItemDescription.find('p').text(gitemDesc);
-			gformHolder.slideToggle(100);
-			gItemDescription.slideToggle(100);
-			e.preventDefault();
-		});
-
-	</script>
 </body>
 </html>

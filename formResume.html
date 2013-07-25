@@ -7,11 +7,51 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
 	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
 </head>
 <body>
 	<!-- this Portion is Reserved for Modal and Floating Navigation -->
 	<div class="modalBox"></div>
-	<div class="pmnlFloatNav"></div>
+	<div class="pmnlFloatNav">
+		<div class="accountPanel">
+			<form action="">
+				<fieldset class="loginForm">
+					<legend class="euroStile">Welcome Back!</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<span class="inputRow">
+						<input type="checkbox"><label for="">Remember Me</label>
+						<a href="#" class="fp">Forgot Password</a>
+					</span>
+					<span class="inputRow">
+						<button type="submit" class="signin">Back for More</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+
+
+				<fieldset class="signupForm">
+					<legend class="euroStile">Welcome to our community.
+We’re delighted to have you.</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<input type="text" value="confirm password">
+					
+					<span class="inputRow">
+						<button type="submit" class="join">Join the Fun</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+			</form>
+			<div class="panelError">
+				<p>This is an error prompt.</p>
+			</div>
+		</div>
+		<nav class="panelSwitch">
+			<a href="#" class="bankGothic signupBTN">join</a><a href="#" class="bankGothic loginBTN">login</a>
+			<a href="#" class="closePanel"><img src="images/icons/close.png" alt=""></a>
+		</nav>
+	</div>
 
 	<div class="centerWrap">
 		<div class="floatWrap">
@@ -470,25 +510,5 @@
 
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		$('.creativeFields').multiSelect();
-		$('.avCB').iCheck({
-			checkboxClass: 'icheckbox_square-blue',
-			radioClass: 'iradio_square-blue'
-		});
-		var tempString = '';
-		$('.addItem').click(function(){
-			
-			if($(this).is(':contains("Add")')){
-				tempString = $(this).text();
-				$(this).text('Cancel');
-			}else if($(this).is(':contains("Cancel")')){
-				$(this).text(tempString);
-			}
-			$(this).parent().find('.addItemFields').slideToggle(300);
-			return false;
-		})
-	</script>
 </body>
 </html>

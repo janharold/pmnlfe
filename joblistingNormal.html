@@ -137,17 +137,17 @@
 									<p>Samsung <i>&#149;</i> Industrial Designer <i>&#149;</i> Caloocan, Philippines <a href="#" class="markJob">0</a></p>
 								</li>
 							</ul>
-							<nav class="joblistPagination">
-								<a href="#">Prev</a>
-								<a href="#" class="disabled">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<a href="#">5</a>
-								<a href="#">6</a>
-								<a href="#">7</a>
-								<a href="#">Next</a>
-							</nav>
+							<ul class="postPagination">
+								<li><a href="#">Prev</a></li>
+								<li><a href="#" class="disabled">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">Next</a></li>
+							</ul>
 						</div>
 						
 						<div class="gBox col_3 jobsSidebar">
@@ -236,34 +236,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-	// Filter
-	$('.joblistFilter li a.mainBtn').each(function(){
-	    var menu = $(this).parent().find('ul');
-	    $(this).click(function(){
-	    	menu.fadeToggle(200);
-	    });
-
-	    $(menu).hover(
-	        function(){},
-	        function(){
-	            menu.fadeToggle(200);
-	        }
-	    );
-	});
-
-	$('.joblistFilter li ul li a').each(function(){
-		
-		$(this).click(function(){
-			var filterText = $(this).text();
-			var mainFilter = $(this).parent().parent().parent().find('a.mainBtn');
-			var swapFilter = $(this).parent().parent().parent().find('a.mainBtn').text();
-
-			mainFilter.text(filterText); 
-			$(this).text(swapFilter);
-		});
-	});
-
-	</script>
+	
 </body>
 </html>

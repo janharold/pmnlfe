@@ -85,8 +85,8 @@ We’re delighted to have you.</legend>
 					<div class="gfContainer pmnlSectionNav">
 						<ul class="manageProfile">
 							<li><a href="jobpostPurchase.html" class="euroStile">Choose<p>Select a Package</p></a></li>
-							<li><a href="formPayment.html" class="euroStile active">Payment<p>Lorem Ipsum</p></a></li>
-							<li><a href="#" class="euroStile">Fill Out<p>Forms</p></a></li>
+							<li><a href="formPayment.html" class="euroStile">Payment<p>Lorem Ipsum</p></a></li>
+							<li><a href="#" class="euroStile active">Fill Out<p>Forms</p></a></li>
 							
 						</ul>
 					</div>
@@ -109,56 +109,55 @@ sign-in to get on your way.</p>
 						<div class="gBox lEdge col_9 leftColumn pmnlForms">
 							<div class="gBox nm col_9 formRow purchaseForm">
 								<div class="gBox col_8">
-									<h3 class="euroStile">Summary of Order</h3>
-									<nav class="svp">
-										<a href="#">Save as PDF</a>
-										<a href="#">Print</a>
-									</nav>
-									<ul class="receiptDetails">
-										<li>Juan Dela Cruz</li>
-										<li>Manila, Philippines</li>
+									<h3 class="euroStile">Account Information</h3>
+									
+									<ul class="receiptDetails pageTwo">
+										<li>Juan Dela Cruz</li>	
 										<li>juan.delacruz@mail.com</li>
-										<li>0917 8100000</li>
-										<li>TIN Number</li>
-										<li>Receipt Number</li>
 									</ul>
-									<table>
-										<tr>
-											<th width="75%">Item</th>
-											<th width="25%">Price</th>
-										</tr>
-										<tr>
-											<td>12 Slots</td>
-											<td>P 42,999</td>
-										</tr>
-										<tr>
-											<td>12% VAT</td>
-											<td>P 5,999</td>
-										</tr>
-									</table>
-									<p class="note">Have a coupon code? Enter your PortfolioMNL discount or coupon code here.</p>
-									<input type="text" class="dcCoupon">
-									<p class="total">Total Amount <em>P48,888</em></p>
-									<nav class="svp">
-										<a href="#">Save as PDF</a>
-										<a href="#">Print</a>
-									</nav>
+									
 								</div>
-							</div>
-							<div class="gBox nm col_9 formRow purchaseForm purchaseLogin">
-								<h4>Proceed to checkout?</h4>
-								<div class="gBox lEdge col_4 loginForm">
-									<h5>Create an Account</h5>
-									<input type="text" value="Contact Person">
-									<input type="text" value="Email Address">
-									<button>Join</button>
+							
+								<fieldset>
+									<input type="text" class="tField" value="Full Name">
+									<input type="text" class="tField" value="Company Name">
+									<input type="text" class="tField twoThirds" value="Company Address">
+									<input type="text" class="tField oneThird" value="Contact Number">
+								</fieldset>
+								
+								<div class="gBox col_8">
+									<h3 class="euroStile">Method of Payment</h3>
+									<span class="checkNradio">
+										<h4 class="euroStile">Bank Deposit <em>(Up to 4 working days to post)</em></h4>
+										<ul>
+											<li>
+												<input type="radio" name="paymentMethod" class="paymentMethod" id="pm"><label>Bank of the Philippine Islands(BPI)</label>
+											</li>
+											<li>
+												<input type="radio" name="paymentMethod" class="paymentMethod" id="pm"><label>Banco De Oro (BDO)</label>
+											</li>
+											<li>
+												<input type="radio" name="paymentMethod" class="paymentMethod" id="pm"><label>Metrobank</label>
+											</li>
+										</ul>
+										
+									</span>
+									<span class="checkNradio">
+										<h4 class="euroStile">Credit Card <em>(Instant Post)</em></h4>
+										<ul>
+											<li>
+												<input type="radio" name="paymentMethod" class="paymentMethod" id="pm"><label>Paypal</label>
+											</li>
+										</ul>
+									</span>
 								</div>
-								<div class="gBox rEdge col_4 loginForm">
-									<h5>Already Have an Account</h5>
-									<input type="text" value="Email Address">
-									<input type="text" value="Password">
-									<button>Sign In</button>
+								
+								<div class="gBox col_8">
+									<input type="checkbox" class="avCB">
+									<label for="">I agree to PortfolioMNL's</label> <a href="#" class="terms">Terms and Condition</a>
+									<button class="submitData">Check Out</button>
 								</div>
+
 							</div>
 						</div>
 

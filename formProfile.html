@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
 	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
 </head>
 <body>
 	<!-- this Portion is Reserved for Modal and Floating Navigation -->
@@ -72,15 +73,18 @@
 										<h3 class="euroStile">Profile</h3>
 										<p class="ldesc">Your Profile will appear with your Portfolio. To publish, you must complete this section 100%.</p>
 										<fieldset>
-											<input type="text" name="" id="" class="tField error" value="Name">
+											<input type="text" name="" id="" class="tField error" value="First Name">
+											<input type="text" name="" id="" class="tField error" value="Last Name">
 											
 											<div class="spFF">
 												<h6>portfoliomnl.com/</h6>
 												<input type="text" name="" id="" class="tField  error" value="username">
 											</div>
 											<input type="text" name="" id="" class="tField error" value="Company">
-											<input type="text" name="" id="" class="tField" value="Contact No.">
-
+											<div class="spFF">
+												<h6>Mobile No.</h6>
+												<input type="text" name="" id="" class="tField  error" value="63917XXXXXXX">
+											</div>
 										<h4 class="euroStile">CREATIVE FIELDS <em>(Choose at least one)</em></h4>
 											<select multiple="multiple" name="" id="" class="creativeFields">
 												<option value="e1">Advertising</option>
@@ -247,16 +251,5 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		$('.creativeFields').multiSelect();
-
-		$('.genderRadio').iCheck({
-			checkboxClass: 'icheckbox_square-blue',
-			radioClass: 'iradio_square-blue'
-		});
-		$('.genderRadio').on('ifChecked', function(event){
-  			alert(event.type + ' callback');
-		});
-	</script>
 </body>
 </html>

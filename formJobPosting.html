@@ -82,26 +82,17 @@ We’re delighted to have you.</legend>
 						<li><a href="#">Subpage</a></li>
 						<li>Current Page</li>
 					</ul>
-					<div class="gfContainer pmnlSectionNav">
-						<ul class="manageProfile">
-							<li><a href="jobpostPurchase.html" class="euroStile">Choose<p>Select a Package</p></a></li>
-							<li><a href="formPayment.html" class="euroStile active">Payment<p>Lorem Ipsum</p></a></li>
-							<li><a href="#" class="euroStile">Fill Out<p>Forms</p></a></li>
-							
-						</ul>
-					</div>
-					<div class="gfContainer pmnlSectionHeader jobsSection">
+					
+					<div class="gfContainer pmnlSectionHeader jobsSection noSectionNav">
 						<div class="gBox lEdge col_4">
 							<h2 class="euroStile">Post a Job</h2>
 						</div>
 						<div class="gBox col_6">
-							<p class="euroStile">Welcome. Our job listings is designed for hiring creative professionals. 
-Let’s get started: Select a package or if you already purchased one, 
-sign-in to get on your way.</p>
+							<p class="euroStile">Welcome. Our job listings is designed for hiring creative professionals. Let’s get started: Select a package or if you already purchased one, sign-in to get on your way.</p>
 							
 						</div>
 						<div class="gBox rEdge col_2">
-							<a href="#" class="signupBTN">Sign In</a>
+							<a href="#" class="purchase">Purchase a Package</a>
 						</div>
 					</div> 
 					<div class="gfContainer pmnlMainContent">
@@ -109,63 +100,52 @@ sign-in to get on your way.</p>
 						<div class="gBox lEdge col_9 leftColumn pmnlForms">
 							<div class="gBox nm col_9 formRow purchaseForm">
 								<div class="gBox col_8">
-									<h3 class="euroStile">Summary of Order</h3>
-									<nav class="svp">
-										<a href="#">Save as PDF</a>
-										<a href="#">Print</a>
-									</nav>
-									<ul class="receiptDetails">
-										<li>Juan Dela Cruz</li>
-										<li>Manila, Philippines</li>
-										<li>juan.delacruz@mail.com</li>
-										<li>0917 8100000</li>
-										<li>TIN Number</li>
-										<li>Receipt Number</li>
-									</ul>
-									<table>
-										<tr>
-											<th width="75%">Item</th>
-											<th width="25%">Price</th>
-										</tr>
-										<tr>
-											<td>12 Slots</td>
-											<td>P 42,999</td>
-										</tr>
-										<tr>
-											<td>12% VAT</td>
-											<td>P 5,999</td>
-										</tr>
-									</table>
-									<p class="note">Have a coupon code? Enter your PortfolioMNL discount or coupon code here.</p>
-									<input type="text" class="dcCoupon">
-									<p class="total">Total Amount <em>P48,888</em></p>
-									<nav class="svp">
-										<a href="#">Save as PDF</a>
-										<a href="#">Print</a>
-									</nav>
+									<h3 class="euroStile">Job Posting Form</h3>
+									
+									
 								</div>
-							</div>
-							<div class="gBox nm col_9 formRow purchaseForm purchaseLogin">
-								<h4>Proceed to checkout?</h4>
-								<div class="gBox lEdge col_4 loginForm">
-									<h5>Create an Account</h5>
-									<input type="text" value="Contact Person">
-									<input type="text" value="Email Address">
-									<button>Join</button>
+							
+								<fieldset>
+									<input type="text" class="tField full error" value="Job Title">
+									<input type="text" class="tField full" value="Profession">
+									<textarea name="" id="" cols="30" rows="30" class="jobBrief">Brief Job Description</textarea>
+									<select name="" id="" class="full">
+										<option value="">Skills Required</option>
+									</select>
+									<select name="" id="" class="full">
+										<option value="">Availability</option>
+									</select>
+									<select name="" id="" class="full">
+										<option value="">Level</option>
+									</select>
+								</fieldset>
+								
+								
+								<div class="gBox col_8">
+									<a href="#" class="genericBtn">Save as Draft</a>
+									<a href="#" class="genericBtn">Preview</a>
+									<button class="submitData">Post Job</button>
 								</div>
-								<div class="gBox rEdge col_4 loginForm">
-									<h5>Already Have an Account</h5>
-									<input type="text" value="Email Address">
-									<input type="text" value="Password">
-									<button>Sign In</button>
-								</div>
+
 							</div>
 						</div>
 
 
-						<div class="gBox rEdge col_3">
-							<h4>Hello, Guest!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquam dignissimos debitis quae quisquam quaerat alias eligendi atque velit quasi commodi similique rem tempora doloremque sunt sit eos sint ratione.</p>
+						<div class="gBox rEdge col_3 jobsSidebar">
+							<div class="errorBox">
+								<h5>Kindly correct this errors</h5>
+								<ul>
+									<li>Error 1</li>
+									<li>Error 2</li>
+									<li>Error 3</li>
+								</ul>
+							</div>
+							<h3>Welcome Back, Juan!</h3>
+							<p class="postCount">You have 3 Posts Left</p>
+							<nav>
+								<a href="#" class="tip">Tips on How to Compose Job Descriptions</a>
+								<a href="#" class="help">Need Help? Contact Us!</a>
+							</nav>
 						</div>
 					
 

@@ -58,22 +58,24 @@
 	/*
 	|| Floating Navigation
 	*/
-	.pmnlFloatNav{position: fixed; top:150px;}
-	.pmnlFloatNav .accountPanel{float:left; width:320px; background: rgba(48,51,101,0.9); padding:20px 20px 10px; margin-left:-320px;}
-	.pmnlFloatNav .accountPanel.signedIn{float:left; width:200px; background: rgba(48,51,101,0.9); padding:20px 20px 15px 10px; margin-left:0px; margin-left:-200px;}
+	.pmnlFloatNav{position: fixed; top:150px; z-index: 100;}
+	.pmnlFloatNav .accountPanel{float:left; width:360px; background: rgba(48,51,101,0.9); padding:20px 20px 10px; margin-left:-360px;}
+	.pmnlFloatNav .accountPanel.signedIn{float:left; width:240px; background: rgba(48,51,101,0.9); padding:20px 20px 15px 10px; margin-left:0px; margin-left:-250px;}
 		/* Account Panel Forms */
 		.accountPanel fieldset{border:none; padding:0; margin:0; display: none;}
 		.accountPanel legend{color:#fff; margin-bottom:10px; font-size:20px;}
-		.accountPanel input{width:260px; padding:8px 8px; margin:5px 0 10px; border-radius:3px; border:1px solid #fff; font-family: 'bankgothiclightbt',sans-serif; color:#666; }
+		.accountPanel input{width:300px; padding:8px 8px; margin:5px 0 10px; border-radius:3px; border:1px solid #fff; font-family: 'bankgothiclightbt',sans-serif; color:#666; }
 		.accountPanel input.error{border:1px solid #d42227;}
 		.accountPanel input[type="checkbox"]{float:left; width:auto; margin:9px 5px 0 0;}
 		.accountPanel label{float:left; margin-top:5px; font-size:14px; color:#fff;}
-		.accountPanel .inputRow{float:left; width:280px; margin-bottom:10px;}
+		.accountPanel .inputRow{float:left; width:320px; margin-bottom:10px;}
 		.accountPanel a{font-size:14px; color:#00cebb;}
 		.accountPanel a:hover{color:#fff;}
 			.accountPanel a.fp{float:right; margin:6px 5px 0 0;}
-			.accountPanel a.llinked{float:right; margin:6px 5px 0 0; background:url(../images/icons/linkedin.png) no-repeat#fff; color:#00aeef; padding: 5px 5px 3px 28px; font-size:12px; border-radius: 3px;}
-		.accountPanel button{float:left; background:#00aeef; border-radius: 3px; border:none; cursor: pointer; color:#fff; padding:6px 10px;}
+			.accountPanel a.llinked{float:right; margin:6px 5px 0 0; background:url(../images/icons/linkedin_white.png) no-repeat #0085b0 3px 3px; color:#fff; padding: 8px 8px 5px 32px; font-size:12px; border-radius: 3px;}
+		.accountPanel button{float:left; background:#00aeef; border-radius: 3px; border:none; cursor: pointer; color:#fff; padding:8px 40px 6px 10px; margin-top:3px; font-family: 'Eurosti'; text-transform: uppercase;}
+			.accountPanel button.join{background:#00cebb url(../images/icons/next.png) no-repeat 95% 6px;}
+			.accountPanel button.signin{background:#00aeef url(../images/icons/user.png) no-repeat 95% 6px;}
 		
 		/* Account Panel - Signed In */
 		.accountPanel.signedIn{}
@@ -93,7 +95,7 @@
 		.panelSwitch a:hover{color:#fff;}
 		.panelSwitch a.closePanel{position: absolute; top:-11px; right: -22px; display: none;}
 	.pmnlFloatNav{}
-	.pmnlFloatNav .panelError{ background:#ff4f4f; width:278px; text-align: center; margin:10px 0;}
+	.pmnlFloatNav .panelError{ background:#ff4f4f; width:318px; text-align: center; margin:10px 0;}
 	.pmnlFloatNav .panelError p{margin:0; font-size:12px; padding:10px; color:#fff;}
 	/*
 		Notifications
@@ -117,10 +119,16 @@
 		/* Search Bar */
 		.pmnlSearch{padding:8px 0 0;}
 		.pmnlSearch .tField{width:300px; padding:6px; color:#888; border:1px solid #ccc;}
-		.pmnlSearch .tField:active{color:333;}
+		.pmnlSearch .tField.active{color:333;}
 			.pmnlSearch .tField.error{border:1px solid #d42227;}
 		.pmnlSearch .tSubmit{width:21px; height:21px; background:url(../images/icons/search.png) no-repeat transparent; text-indent: -9999px; border:none; margin:3px 5px;}
 		.pmnlSearch .tSubmit:hover{background-position: 0 -21px;}
+
+		/* Sticker */
+		.stickerPost{background: url(../images/backgrounds/stickerPost.png) no-repeat; width:219px; height: 219px; -moz-box-sizing:border-box; box-sizing:border-box; padding:40px 0; position: absolute; right: 0; top:-20px; text-align: center;}
+		.stickerPost h4{margin:50px 0 0; font-family: 'Eurosti'; color:#fff; text-transform: uppercase;}
+		.stickerPost h5, .stickerPost h6{margin:0;}
+		.stickerPost a{display:block; margin:15px 0 0; color:#fff;}
 	
 	/*
 	|| Homepage Sections
@@ -134,13 +142,15 @@
 		*/
 		.pmnlHomepage h3{color:#3d3a7e; text-transform: uppercase; margin:0;}
 		.pmnlHomepage ul, .pmnlFeaturedJobs ul{margin:20px 0; padding:0; text-align: center;}
+			.pmnlSearchResults ul{margin:20px 45px; padding:0; text-align: left;}
 		.pmnlHomepage ul li, .pmnlFeaturedJobs ul li{display: inline-block; margin:0 10px; padding:0; position: relative;}
-		.pmnlHomepage ul li:hover a, .pmnlFeaturedJobs ul li:hover a{display: block;}
-		.pmnlHomepage ul li a, .pmnlFeaturedJobs ul li a{display:none;background: rgba(28,175,227,0.8); width:135px; height: 100px; -moz-box-sizing:border-box; box-sizing:border-box; padding:10px; position: absolute; z-index: 20; text-align: left;}
-			.pmnlHomepage ul li a h4, .pmnlFeaturedJobs ul li a h4{margin:0; font-size:14px; color:#fff;}
-			.pmnlHomepage ul li a h5, .pmnlFeaturedJobs ul li a h5{margin:0; font-weight: normal; color:#fff;}
-			.pmnlHomepage ul li a i, .pmnlFeaturedJobs ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
-			.pmnlHomepage ul li a i:hover, .pmnlFeaturedJobs ul li a i:hover{text-decoration: underline;}
+			.pmnlSearchResults ul li{display: inline-block; margin:0 5px 10px; padding:0; position: relative;}
+		.pmnlHomepage ul li:hover a, .pmnlFeaturedJobs ul li:hover a, .pmnlSearchResults ul li:hover a{display: block;}
+		.pmnlHomepage ul li a, .pmnlFeaturedJobs ul li a, .pmnlSearchResults ul li a{display:none;background: rgba(28,175,227,0.8); width:135px; height: 100px; -moz-box-sizing:border-box; box-sizing:border-box; padding:10px; position: absolute; z-index: 20; text-align: left;}
+			.pmnlHomepage ul li a h4, .pmnlFeaturedJobs ul li a h4, .pmnlSearchResults ul li a h4{margin:0; font-size:14px; color:#fff;}
+			.pmnlHomepage ul li a h5, .pmnlFeaturedJobs ul li a h5, .pmnlSearchResults ul li a h5{margin:0; font-weight: normal; color:#fff;}
+			.pmnlHomepage ul li a i, .pmnlFeaturedJobs ul li a i, .pmnlSearchResults ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
+			.pmnlHomepage ul li a i:hover, .pmnlFeaturedJobs ul li a i:hover, .pmnlSearchResults ul li a i:hover{text-decoration: underline;}
 
 	/*
 	|| Content
@@ -169,13 +179,17 @@
 			
 		/* Section Header */
 		.pmnlSectionHeader{margin:110px 0 20px;}
+		.pmnlSectionHeader.noSectionNav{margin:30px 0 20px;}
 		.pmnlSectionHeader h2{text-transform:uppercase;  color:#1dafe2; margin:0; padding:25px 50px; font-size:42px; font-weight: normal;}
+		.pmnlSectionHeader h2.twoLiner{padding:0px 50px;}
 		.pmnlSectionHeader .rEdge, .pmnlSectionHeader.jobsSection .col_6{border-left:1px solid #efefef;}
 			.pmnlSectionHeader.jobsSection .rEdge{border-left:none;}
 		.pmnlSectionHeader p{padding:25px 260px 25px 70px; margin:0;}
 			.pmnlSectionHeader.jobsSection p{padding:25px 60px 25px 70px; margin:0;}
 			.pmnlSectionHeader.jobsSection .col_2 a{background:#00cebb url(../images/icons/user.png) no-repeat 90% 10px; color:#fff; font-family: 'Eurosti'; text-transform: uppercase; display: block; padding:12px 20px 10px; border-radius: 4px; margin:25px 0 0;}
+			.pmnlSectionHeader.jobsSection .col_2 a.purchase{display: block; background:#00aeef url(../images/icons/purchase.png) no-repeat 90% 12px; padding:12px 12px 10px; color:#fff; font-family: 'Eurosti'; border-radius: 4px; text-transform: uppercase; }
 			.pmnlSectionHeader.jobsSection .col_2 a:hover{background-color:#00dfca;}
+
 
 		/* Main Content */
 		.pmnlMainContent{}
@@ -208,8 +222,9 @@
 			.pmnlForms .formRow span{}
 			.pmnlForms .formRow a.addItem{float:right; color:#00aeef; margin-top:-20px; text-transform: uppercase;}
 			.pmnlForms .formRow a.addItem.subLink{font-size:12px; text-transform: none; margin:0 0 10px;}
-			.pmnlForms .formRow input.tField{width:440px; padding:8px 6px 6px; color:#aaa; border:1px solid #ccc; font-family: 'Eurosti', sans-serif; margin:0 0 20px 0; text-transform: uppercase;}
-			.pmnlForms .formRow input.tField:active{color:#555;}
+			.pmnlForms .formRow input.tField{width:440px; padding:8px 6px 6px; color:#aaa; border:1px solid #ccc; font-family: 'Eurosti', sans-serif; margin:0 0 20px 0; text-transform: uppercase; outline: none;}
+
+			.pmnlForms .formRow input.tField.active{color:#555; border-color:#555;}
 			.pmnlForms .formRow input.tField.error{border:1px solid #d42227;}
 				.pmnlForms .formRow input.tField.twoThirds{width:310px;}
 				.pmnlForms .formRow input.tField.active{color:#444;}
@@ -267,6 +282,9 @@
 			.errorBox h5{margin:0 0 5px;}
 			.errorBox ul{margin:0; padding:0 0 0 20px; }
 			.errorBox ul li{list-style: square; font-size:12px;}
+				.jobsSidebar .errorBox{margin:0; font-size:1.2em;}
+				.jobsSidebar .errorBox ul{ margin:0;}
+				.jobsSidebar .errorBox ul li{margin:0 0 0 20px;font-size:0.7em;}
 	/*
 	|| Sidebar
 	*/
@@ -302,6 +320,9 @@
 		.albumList .albumControls label{position: relative; z-index: 20;}
 		.albumList .albumControls input.addAItem{ width:100px; cursor: pointer; margin-top:5px;}
 		.albumList .albumControls select{float:left; font-family: Helvetica, sans-serif; text-transform: none; margin:0 8px; padding:1px 3px;}
+			.dropZone{float:left; width:430px; text-align:center;border:1px dashed #888; border-radius: 5px; height:40px; padding:25px 0 0px; margin:5px 0; position: relative; background: #eee; font-size:0.8em; z-index: 30;}
+			.dropZone i{background:#ddd; padding:4px 8px; border-radius: 4px; font-style: normal; }
+			.dropZone input{opacity: 0; z-index:50; width:75px; height:45px; top:0; position: absolute; left:210px; cursor: pointer !important; background:red;}
 
 
 	/* 
@@ -324,17 +345,21 @@
 	.listFilters a{background:#eee url(../images/icons/x.png) no-repeat 90% 7px; padding:5px 30px 5px 10px; }
 
 	/* Featured Jobs */
-	.pmnlFeaturedJobs{ background: #e9e9e8; padding:10px 0px; margin:0 0 20px;}
-	.pmnlFeaturedJobs h3{text-transform: uppercase; margin-left: 25px;color:#555;}
+	.pmnlFeaturedJobs, .pmnlSearchResults{ background: #e9e9e8; padding:10px 0px; margin:0 0 20px;}
+	.pmnlFeaturedJobs h3, .pmnlSearchResults h3{text-transform: uppercase; margin-left: 25px;color:#555;}
 	.pmnlFeaturedJobs{}
 
 	/* Job Listing */
 	.pmnlJobList{}
+		.pmnlJobList.postList{background:#eee;}
 	.pmnlJobList h3{font-size:1.4em; font-family: 'Eurosti'; margin:0; color:#777; text-transform: uppercase; margin:30px 50px 0px; border-bottom:4px solid #ccc; padding-bottom:10px;}
 		.col_9.pmnlJobList h3{margin:30px 10px 0;}
 	.pmnlJobList ul{margin:0; padding:0 50px 40px;}
 		.col_9.pmnlJobList ul{margin:0; padding:0 10px 40px;}
+		.col_9.pmnlJobList.postList ul{margin:0; padding:20px 30px 20px;}
 	.pmnlJobList ul li{padding:20px 0 20px; border-bottom:1px solid #ececec;}
+		.pmnlJobList.postList ul li{padding:20px 0 20px; border-bottom:1px solid #ddd;}
+	.pmnlJobList ul li:last-child{border-bottom:none;}
 	.pmnlJobList ul li h3{font-size:1.2em; font-family: 'Eurosti'; margin:0; color:#777; border-bottom: none; padding:0;}
 		.col_9.pmnlJobList ul li h3{font-size:1.2em; font-family: 'Eurosti'; margin:0; color:#777; border-bottom: none; padding:0;}
 	.pmnlJobList ul li h3 a{text-transform: uppercase; color:#1cafe3;}
@@ -347,15 +372,19 @@
 	.pmnlJobList{}
 
 		/* Pagination */
-		.joblistPagination{text-align:center;}
-		.joblistPagination a{background:#eee; padding:5px 10px;}
-		.joblistPagination a.disabled{background:#fff; cursor: default;}
-		.joblistPagination a.disabled:hover{background:#fff; cursor: default; color:#333;}
-		.joblistPagination a:hover{background:#1cafe3; color:#fff;}
+		.postPagination{text-align:center;}
+			.pmnlJobList.postList .postPagination{background:#fff; padding:20px 0;}
+		.postPagination li{display: inline-block;}
+		.postPagination a{background:#eee; padding:5px 10px;}
+		.postPagination a.disabled{background:#fff; cursor: default;}
+		.postPagination a.disabled:hover{background:#fff; cursor: default; color:#333;}
+		.postPagination a:hover{background:#1cafe3; color:#fff;}
 
 		/* Jobs Sidebar */
 		.jobsSidebar{}
+		.jobsSidebar h3{font-size:1.2em; color:#00aeef; font-family: 'Eurosti'; text-transform: uppercase; margin:20px 0 0;}
 		.jobsSidebar h4{font-size:1em; color:#777; font-family: 'Eurosti'; text-transform: uppercase; text-align: center;}
+		.jobsSidebar .postCount{font-family: 'Eurosti'; margin:0; text-transform: uppercase; border-bottom:1px solid #888; padding:0 0 20px;}
 		.jobsSidebar ul{margin:20px 0; padding:0;}
 		.jobsSidebar ul li{ margin:0 30px 20px 65px; padding:0; position: relative; width:140px;}
 		.jobsSidebar ul li:hover a{display: block;}
@@ -364,7 +393,13 @@
 			.jobsSidebar ul li a h5{margin:0; font-weight: normal; color:#fff;}
 			.jobsSidebar ul li a i{background:url(../images/icons/star_white.png) no-repeat; color:#fff; font-style: normal; font-size:12px; padding:0 0 0 20px; position: absolute; bottom:10px;}
 			.jobsSidebar ul li a i:hover{text-decoration: underline;}
-
+			
+		.jobsSidebar nav{padding:10px 0;}
+		.jobsSidebar nav a{display: block; font-family: 'Eurosti'; margin:5px 0 5px 15px; padding:0 0 10px 40px;}
+		.jobsSidebar nav a.tip{background: url(../images/icons/tip.png) no-repeat;}
+		.jobsSidebar nav a.help{background: url(../images/icons/help.png) no-repeat; padding-top:8px;}
+		.jobsSidebar nav a:hover{color:#3d3a7e;}
+		
 	/* Job Purchase */
 	.jobpostPurchase{background:#e9e9e8; padding:20px 0; position:relative; z-index: 1;}
 	.jobpostPurchase ul{}
@@ -387,6 +422,7 @@
 		.jobConcierge a:hover{background-color:#00baff;}
 	
 	
+
 	/* Job Posting Purchases */
 	.purchaseForm{}
 	.purchaseForm{}
@@ -396,6 +432,7 @@
 			.purchaseForm .svp a{margin:0 5px; color:#555;}
 			.purchaseForm .svp a:hover{color:#111;}
 		.purchaseForm .receiptDetails{margin:10px 0 40px; padding:0;}
+		.purchaseForm .receiptDetails.pageTwo{margin:10px 0 20px; padding:0;}
 		.purchaseForm .receiptDetails li{margin:4px 0; color:#444;}
 		.purchaseForm table{width:100%; margin-bottom:20px;}
 		.purchaseForm th{text-align: left; border-bottom:2px solid #ccc; padding-bottom:5px;}
@@ -417,7 +454,25 @@
 		.purchaseForm.purchaseLogin .rEdge.loginForm button{background:#00cebb url(../images/icons/user.png) no-repeat 90% 10px; padding:12px 50px 10px 12px; text-align: left; color:#fff; border-radius: 5px;}
 		.purchaseForm.purchaseLogin .lEdge.loginForm button{background:#00aeef url(../images/icons/next.png) no-repeat 90% 10px; padding:12px 50px 10px 12px; text-align: left; color:#fff; border-radius: 5px; float:right; margin:0 -5px 0 0;}
 		.purchaseForm.purchaseLogin{}
+		.purchaseForm a.terms{color:#00aeef;}
+
+		/* Fieldsets*/
+		.pmnlForms .formRow.purchaseForm h3{margin-bottom:20px;}
+		.pmnlForms .formRow.purchaseForm fieldset{ margin-bottom:20px;}
+		.pmnlForms .formRow.purchaseForm input.tField{width:350px; margin:0 8px 15px;}
+		.pmnlForms .formRow.purchaseForm input.tField.error{border-color:#d42227;}
+		.pmnlForms .formRow.purchaseForm input.tField.oneThird{width:200px;}
+		.pmnlForms .formRow.purchaseForm input.tField.twoThirds{width:500px;}
+		.pmnlForms .formRow.purchaseForm input.tField.full{width:730px;}
+		.pmnlForms .formRow.purchaseForm textarea{width:730px; padding:8px 6px 6px; color:#aaa; border:1px solid #ccc; font-family: 'Eurosti', sans-serif; margin:0 8px 20px ; text-transform: uppercase; outline: none; resize:none;}
+		.pmnlForms .formRow.purchaseForm textarea.active{color:#333; border-color: #333;}
 		
+		.pmnlForms .formRow.purchaseForm .checkNradio{width:370px;}
+		.pmnlForms .formRow.purchaseForm .checkNradio ul{}
+		.pmnlForms .formRow.purchaseForm .checkNradio ul li{width:350px; padding-left:20px;}
+
+		.pmnlForms .formRow.purchaseForm .submitData{margin:15px 0 0;}
+		.pmnlForms .formRow.purchaseForm select.full{margin:0 8px 15px; width:742px;}
 
 /*		
 	Footer

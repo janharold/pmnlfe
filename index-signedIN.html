@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
 	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
 </head>
 <body>
 	<!-- this Portion is Reserved for Modal and Floating Navigation -->
@@ -22,7 +23,7 @@
 			</ul>
 		</div>
 		<nav class="panelSwitch signedIn">
-			<a href="#" class="accountSwitch"><img src="images/icons/gear.png" alt=""></a>
+			<a href="#" class="accountSwitch signedIn"><img src="images/icons/gear.png" alt=""></a>
 			<a href="#" class="closePanel"><img src="images/icons/close.png" alt=""></a>
 		</nav>
 	</div>
@@ -180,20 +181,5 @@
 
 		</div>
 	</div>
-	<script type="text/javascript">
-		// Panel Switcher is false by default, this is to make sure that
-		// toggling the account panel won't have any conflict
-		var panelSwitcher = false;
-		$('.accountSwitch').click(function(){
-			if(panelSwitcher == false){
-				panelSwitcher = true;
-				$('.accountPanel').animate({marginLeft:'+=200px'},{duration:'500'});
-			}else{
-				panelSwitcher = false;
-				$('.accountPanel').animate({marginLeft:'-=200px'},{duration:'500'});
-			}
-			return false;
-		});
-	</script>
 </body>
 </html>
