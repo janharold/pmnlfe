@@ -7,6 +7,8 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
 	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/jquery.switch/jquery.switch.min.js"></script>
+	<script type="text/javascript" src="js/rhinoslider105/js/rhinoslider-1.05.min.js"></script>
 	<script type="text/javascript" src="js/pmnlApp.js"></script>
 </head>
 <body>
@@ -25,7 +27,7 @@
 					</span>
 					<span class="inputRow">
 						<button type="submit" class="signin">Back for More</button>
-						<a href="#" class="llinked">Login with LinkedIn</a>
+						<a href="#" class="llinked"><img src="images/icons/linkedin_white_in.png" alt="">Sign-in with LinkedIn</a>
 					</span>
 				</fieldset>
 
@@ -36,11 +38,21 @@ We’re delighted to have you.</legend>
 					<input type="text" value="email">
 					<input type="text" value="password">
 					<input type="text" value="confirm password">
-					
+					<span class="inputRow">
+						<input type="checkbox"><label for="">I agree with the PortfolioMNL
+					<a href="#">Terms and Condition</a>	</label>
+											
+					</span>
 					<span class="inputRow">
 						<button type="submit" class="join">Join the Fun</button>
-						<a href="#" class="llinked">Login with LinkedIn</a>
+						<a href="#" class="llinked"><img src="images/icons/linkedin_white_in.png" alt="">Sign-in with LinkedIn</a>
 					</span>
+					<h3>I'd like to start with</h3>
+		            <div class="bool-slider true">
+					    <div class="inset">
+					        <div class="control"></div>
+					    </div>
+					</div>
 				</fieldset>
 			</form>
 			<div class="panelError">
@@ -48,7 +60,7 @@ We’re delighted to have you.</legend>
 			</div>
 		</div>
 		<nav class="panelSwitch">
-			<a href="#" class="bankGothic signupBTN">join</a><a href="#" class="bankGothic loginBTN">login</a>
+			<a href="#" class="bankGothic signupBTN active">join</a><a href="#" class="bankGothic loginBTN">login</a>
 			<a href="#" class="closePanel"><img src="images/icons/close.png" alt=""></a>
 		</nav>
 		
@@ -70,6 +82,23 @@ We’re delighted to have you.</legend>
 					<input type="text" class="tField bankGothic" value="search">
 					<input type="submit" class="tSubmit" value="go">
 				</form>
+				<div class="stickerPost">
+					<h4><a href="#">Post a Job!</a></h4>
+					<div class="stickies">
+						<a href="#" class="active">
+							<h5>UI Designer</h5>
+							<h6>Brewed Concepts</h6>
+						</a>
+						<a href="#">
+							<h5>Industrial Desi..</h5>
+							<h6>AIGC Industry</h6>
+						</a>
+						<a href="#">
+							<h5>Architect</h5>
+							<h6>Lettuk Inc</h6>
+						</a>
+					</div>
+				</div>
 			</div>
 			<!-- 
 				I N N E R   W R A P
@@ -78,8 +107,14 @@ We’re delighted to have you.</legend>
 			<div class="innerWrap">
 				<div class="pmnlContent">
 					<div class="gfContainer homepageBanner">
-
-						<img src="images/samples/sampleBanner.png" alt="">
+						<ul>
+							<li><img src="images/samples/banner1.png" alt=""></li>
+							<li><img src="images/samples/banner2.jpg" alt=""></li>
+							<li><img src="images/samples/banner3.jpg" alt=""></li>
+							<li><img src="images/samples/banner4.jpg" alt=""></li>
+						</ul>
+						
+						
 
 					</div>
 					<div class="gfContainer pmnlHomepage">

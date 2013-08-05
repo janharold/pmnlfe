@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-	// TextFields
+	/* 
+	//TextFields
 	$('.tField').each(function(){
 	    var defaultText = '';
 	    $(this).focus(function(){
@@ -36,6 +37,8 @@ $(document).ready(function() {
 			}
 		});
 	});
+	*/
+
 
 	//
 	// Resume Form
@@ -63,10 +66,14 @@ $(document).ready(function() {
 	var panelSwitcher = 0;
 	$('.loginBTN').click(function(){
 		if(panelSwitcher == 0){
-			$('.accountPanel').animate({marginLeft:'+=360px'},{duration:'500'});
+			$('.accountPanel').animate({marginLeft:'+=280px'},{duration:'500'});
+			$('.signupBTN').removeClass('active');
+			$(this).addClass('active');
 			$('.loginForm').fadeToggle(600);
 			$('.closePanel').fadeToggle(300);
 		}else if(panelSwitcher == 2){
+			$('.signupBTN').removeClass('active');
+			$(this).addClass('active');
 			$('.loginForm').slideToggle(200);
 			$('.signupForm').slideToggle(200);
 		}
@@ -76,10 +83,14 @@ $(document).ready(function() {
 	$('.signupBTN').click(function(){
 		
 		if(panelSwitcher == 0){
-			$('.accountPanel').animate({marginLeft:'+=360px'},{duration:'500'});
+			$('.loginBTN').removeClass('active');
+			$(this).addClass('active');
+			$('.accountPanel').animate({marginLeft:'+=280px'},{duration:'500'});
 			$('.signupForm').fadeToggle(600);
 			$('.closePanel').fadeToggle(300);
 		}else if(panelSwitcher == 1){
+			$('.loginBTN').removeClass('active');
+			$(this).addClass('active');
 			$('.signupForm').slideToggle(200);
 			$('.loginForm').slideToggle(200);
 		}
@@ -93,7 +104,7 @@ $(document).ready(function() {
 		}else if(panelSwitcher == 2){
 			$('.signupForm').fadeToggle(500);
 		}
-		$('.accountPanel').animate({marginLeft:'-=360px'},{duration:'400'});
+		$('.accountPanel').animate({marginLeft:'-=280px'},{duration:'400'});
 		panelSwitcher = 0;
 		return false;
 	});
@@ -215,17 +226,21 @@ $(document).ready(function() {
 	        }
 	    );
 	});
-	$('.joblistFilter li ul li a').each(function(){
+	$('.joblistFilter li ul div li a').each(function(){
 		
 		$(this).click(function(){
-			var filterText = $(this).text();
-			var mainFilter = $(this).parent().parent().parent().find('a.mainBtn');
-			var swapFilter = $(this).parent().parent().parent().find('a.mainBtn').text();
+			var filterText2 = $(this).text();
+			var mainFilter2 = $(this).parent().parent().parent().parent().find('a.mainBtn');
+			var swapFilter2 = $(this).parent().parent().parent().parent().find('a.mainBtn').text();
 
-			mainFilter.text(filterText); 
-			$(this).text(swapFilter);
+			mainFilter2.text(filterText2); 
+			$(this).text(swapFilter2);
 		});
 	});
+
+	//
+	// Job Applicant
+	//
 
 	//
 	// Payment Form
@@ -237,4 +252,118 @@ $(document).ready(function() {
 	$('.paymentMethod').on('ifChecked', function(event){
 			alert(event.type + ' callback');
 	});
+
+	//
+	// Portfolio Page
+	//
+
+		// Thumbnails
+		$('.thumbBatches').rhinoslider({
+			controlsMousewheel: false,
+			controlsKeyboard: false,
+			controlsPrevNext: false,
+			controlsPlayPause: false,
+			cycled: false,
+			shiftValue: '100',
+			effectTime:'500',
+			showBullets: 'never',
+			showControls: 'never',
+			slidePrevDirection: 'toRight',
+			slideNextDirection: 'toLeft'
+		});
+
+		var indexBatch = 0;
+		var batchTotal = $('.thumbBatches').children().length;
+
+		if(batchTotal == 1){
+			$('.nextBatch').addClass('hiddenControl');
+		}
+
+		$('.itemControl.prevBatch').click(function(){
+			console.log('prev');
+			if(indexBatch >= 1){
+				indexBatch--;
+			}
+			if(indexBatch == batchTotal-2){
+				$('.itemControl.nextBatch').removeClass('hiddenControl');
+			}
+			if(indexBatch == 0){
+				$(this).addClass('hiddenControl');
+			}
+			$('.thumbBatches').data('rhinoslider').prev();
+			return false;
+			
+		});
+		$('.itemControl.nextBatch').click(function(){
+			console.log('next');
+			if(indexBatch >= 0 && indexBatch != batchTotal-1){
+				indexBatch++;
+			}
+			if(indexBatch <= 1){
+				$('.itemControl.prevBatch').removeClass('hiddenControl');
+			}
+			if(indexBatch == batchTotal-1){
+				$(this).addClass('hiddenControl');
+			}
+			$('.thumbBatches').data('rhinoslider').next();
+			return false;
+		});
+
+	//
+	// Sticker Post
+	//
+	var initNum = 0;
+	setInterval(function() {
+		var sContainer = $('.stickerPost .stickies');
+	    var stickyPosts = sContainer.children().length;
+	   
+		if(initNum != stickyPosts-1){
+	    	initNum++;
+	    }else if(initNum == stickyPosts-1){
+	    	initNum = 0;
+	    }
+
+	    sContainer.find('.active').fadeOut(300).removeClass('active');
+	    sContainer.children().eq(initNum).delay(300).fadeIn(300).delay(600).addClass('active');
+
+	}, 5000);
+
+	//
+	// Shortlisting
+	//
+	$('.shortlistUser').click(function(){
+		$(this).toggleClass('addedTolist');
+
+		if($(this).is(':contains("Add")')){
+			$(this).text('Remove to Shortlist');
+		}else if($(this).is(':contains("Remove")')){
+			$(this).text('Add to Shortlist');
+		}
+	});
+	
+	//
+	// Switching / Account Switcher
+	//
+	$('.bool-slider .inset .control').click(function() {
+        if (!$(this).parent().parent().hasClass('disabled')) {
+            if ($(this).parent().parent().hasClass('true')) {
+                $(this).parent().parent().addClass('false').removeClass('true');
+            } else {
+                $(this).parent().parent().addClass('true').removeClass('false');
+            }
+        }
+    });
+
+    //
+    // Homepage Slider Banner
+    // 
+    $('.homepageBanner ul').rhinoslider({
+			effectTime: 500,
+			showTime: 4000,
+			controlsMousewheel: false,
+			controlsKeyboard: false,
+			controlsPlayPause: false,
+			autoPlay: true
+		});
+
 });
