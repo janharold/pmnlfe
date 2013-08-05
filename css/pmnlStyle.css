@@ -62,8 +62,8 @@
 	|| Floating Navigation
 	*/
 	.pmnlFloatNav{position: fixed; top:150px; z-index: 500;}
-	.pmnlFloatNav .accountPanel{float:left; width:280px; background: rgba(48,51,101,0.9); padding:20px 20px 10px; margin-left:-280px;}
-	.pmnlFloatNav .accountPanel.signedIn{float:left; width:240px; background: rgba(48,51,101,0.9); padding:20px 20px 15px 10px; margin-left:0px; margin-left:-250px;}
+	.pmnlFloatNav .accountPanel{float:left; width:280px; background: rgba(56,64,102,0.9); padding:20px 20px 10px; margin-left:-280px;}
+	.pmnlFloatNav .accountPanel.signedIn{float:left; width:240px; background: rgba(48,51,102,0.9); padding:20px 20px 15px 10px; margin-left:0px; margin-left:-250px;}
 		/* Account Panel Forms */
 		.accountPanel fieldset{border:none; padding:0; margin:0; display: none;}
 		.accountPanel legend{color:#fff; margin-bottom:10px; font-size:20px;}
@@ -546,7 +546,7 @@
 	.userPortfolio ul{margin:0; padding:0;}
 	.userPortfolio .mainItems li{background:#fff; position: relative; padding:0; width:775px; height: auto;}
 	.userPortfolio .mainItems li img{text-align: center;}
-	.userPortfolio .mainItems li div{padding:20px; bottom:5px; color:#444; text-align: center; width:inherit;}
+	.userPortfolio .mainItems li div{padding:20px; bottom:5px; color:#444; text-align: center; width:inherit; opacity: 0.85;}
 	.userPortfolio .mainItems li div h2{font-size:1em; font-family: 'Eurosti'; text-transform: uppercase; font-weight: normal; letter-spacing: 0.3em; margin:0 0 5px; }
 	.userPortfolio .mainItems li div p{margin:0; font-size:0.8em;}
 	.userPortfolio .thumbBatches{height:100px;}
