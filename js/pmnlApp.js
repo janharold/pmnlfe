@@ -216,17 +216,17 @@ $(document).ready(function() {
 	$('.joblistFilter li a.mainBtn').each(function(){
 	    var menu = $(this).parent().find('ul');
 	    $(this).click(function(){
-	    	menu.fadeToggle(200);
+	    	menu.css('top','48px');
 	    });
 
 	    $(menu).hover(
 	        function(){},
 	        function(){
-	            menu.fadeToggle(200);
+	           menu.css('top','-999px');
 	        }
 	    );
 	});
-	$('.joblistFilter li ul div li a').each(function(){
+	/*$('.joblistFilter li ul div li a').each(function(){
 		
 		$(this).click(function(){
 			var filterText2 = $(this).text();
@@ -236,7 +236,7 @@ $(document).ready(function() {
 			mainFilter2.text(filterText2); 
 			$(this).text(swapFilter2);
 		});
-	});
+	});*/
 
 	//
 	// Job Applicant
@@ -358,12 +358,17 @@ $(document).ready(function() {
     // Homepage Slider Banner
     // 
     $('.homepageBanner ul').rhinoslider({
-			effectTime: 500,
-			showTime: 4000,
-			controlsMousewheel: false,
-			controlsKeyboard: false,
-			controlsPlayPause: false,
-			autoPlay: true
-		});
+		effectTime: 500,
+		showTime: 4000,
+		controlsMousewheel: false,
+		controlsKeyboard: false,
+		controlsPlayPause: false,
+		autoPlay: true
+	});
+
+	//
+	// Job Filter Scrollbar
+	//
+	$(".groupScroll").mCustomScrollbar();
 
 });

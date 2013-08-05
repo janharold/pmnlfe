@@ -37,7 +37,7 @@
 	
 	.gBox{float:left; margin:0 10px;}
 	.gBox.nm{margin:0;}
-	.gfContainer{float:left; width:1140px; margin:0;}
+	.gfContainer{float:left; width:1140px; margin:0; position: relative; z-index: 1;}
 	.lEdge{margin-left:0;}
 	.rEdge{margin-right:0;}
 	.solid{display: block; height:50px;}
@@ -350,11 +350,11 @@
 	.joblistFilter li h3{margin:0 15px; padding:8px 0; font-family: 'Eurosti'; border-bottom:1px solid #bbb; font-size:0.9em;}
 	.joblistFilter li a{display: block; padding:15px 50px 15px 30px ; margin:0; color:#fff; font-family: 'Eurosti'; text-transform: uppercase; background:url(../images/icons/arrowdown_white.png) no-repeat  85% 20px;}
 	.joblistFilter li a:hover{background:#aaa url(../images/icons/arrowdown_white.png) no-repeat  85% 20px;}
-		.joblistFilter li ul{position: absolute; left:-40px; top:48px; width:inherit; display: none; }
+		.joblistFilter li ul{position: absolute; left:-40px; top:-900px; width:inherit;}
 		.joblistFilter li ul li{display: block; width: 200px;background:#ccc;}
 		.joblistFilter li ul li a{background-image:none !important; padding:5px 30px; display: block; }
 	.joblistFilter{}
-	.groupScroll{height: 100px;}
+	.groupScroll{height: 200px; float:left; overflow: none;}
 
 	/* List Filter*/
 	.listFilters{padding:20px 50px 10px; ;}
