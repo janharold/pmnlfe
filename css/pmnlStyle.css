@@ -2,7 +2,8 @@
 	Client : PortfolioMNL 
 	Thousand Minds
 	Front-end Developer - Jan Harold Diaz
-	Last Update - June 2013
+	Started - June
+	Last Update - August 2013
 	Project Prefix for Classes/IDS - pmnl
 */
 
@@ -141,8 +142,8 @@
 		.stickerPost h6{text-transform: uppercase;}
 		
 		.stickerPost .stickies{position:relative;}
-		.stickerPost .stickies a{display:block; opacity:0; margin:0; color:#fff; position: absolute; top:-20px; left:57px; width:100px; padding:15px 0 0;}
-		.stickerPost .stickies a.active{display:block; opacity: 1;}
+		.stickerPost .stickies a{display:block; margin:0; color:#fff; position: absolute; top:-10px; left:47px; width:120px; padding:15px 0 0;}
+		.stickerPost .stickies a.active{display:block;}
 	
 	/*
 	|| Homepage Sections

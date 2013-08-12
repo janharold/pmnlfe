@@ -323,10 +323,11 @@ $(document).ready(function() {
 	    	initNum = 0;
 	    }
 
-	    sContainer.find('.active').fadeOut(300).removeClass('active');
-	    sContainer.children().eq(initNum).delay(300).fadeIn(300).delay(600).addClass('active');
+	    sContainer.find('.active').animate({top:'-=10px',opacity:0},{duration:150}).removeClass('active');
+	    sContainer.children().eq(initNum).css('top','-10px').delay(170).animate({top:'-=10px',opacity:1},{duration:150}).delay(400).addClass('active');
 
-	}, 5000);
+	    console.log('hey');
+	}, 3000);
 
 	//
 	// Shortlisting
