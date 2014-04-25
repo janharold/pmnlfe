@@ -60,13 +60,22 @@ $(document).ready(function() {
 			alert(event.type + ' callback');
 	});
 
+	//
+	$('.profileType').iCheck({
+		checkboxClass: 'icheckbox_square-blue',
+		radioClass: 'iradio_square-blue'
+	});
+	$('.profileType').on('ifChecked', function(event){
+			alert(event.type + ' callback');
+	});
+
 	// Account Panel Switching
 	// Panel Switcher is 0 by default, this is to make sure that
 	// toggling the forms on the account panel won't have any conflict
 	var panelSwitcher = 0;
 	$('.loginBTN').click(function(){
 		if(panelSwitcher == 0){
-			$('.accountPanel').animate({marginLeft:'+=280px'},{duration:'500'});
+			$('.accountPanel').animate({marginLeft:'+=200px'},{duration:'500'});
 			$('.signupBTN').removeClass('active');
 			$(this).addClass('active');
 			$('.loginForm').fadeToggle(600);
@@ -76,6 +85,10 @@ $(document).ready(function() {
 			$(this).addClass('active');
 			$('.loginForm').slideToggle(200);
 			$('.signupForm').slideToggle(200);
+		}else if(panelSwitcher == 3){
+			$(this).addClass('active');
+			$('.loginForm').slideToggle(200);
+			$('.forgotForm').slideToggle(200);
 		}
 		panelSwitcher = 1;
 		return false;
@@ -85,7 +98,7 @@ $(document).ready(function() {
 		if(panelSwitcher == 0){
 			$('.loginBTN').removeClass('active');
 			$(this).addClass('active');
-			$('.accountPanel').animate({marginLeft:'+=280px'},{duration:'500'});
+			$('.accountPanel').animate({marginLeft:'+=200px'},{duration:'500'});
 			$('.signupForm').fadeToggle(600);
 			$('.closePanel').fadeToggle(300);
 		}else if(panelSwitcher == 1){
@@ -93,10 +106,26 @@ $(document).ready(function() {
 			$(this).addClass('active');
 			$('.signupForm').slideToggle(200);
 			$('.loginForm').slideToggle(200);
+		}else if(panelSwitcher == 3){
+			$('.loginBTN').removeClass('active');
+			$(this).addClass('active');
+			$('.signupForm').slideToggle(200);
+			$('.forgotForm').slideToggle(200);
 		}
 		panelSwitcher = 2;
 		return false;
 	});
+
+	$('.forgotBTN').click(function(){
+
+		$('.loginForm').slideToggle(200);
+		$('.forgotForm').slideToggle(200);
+		panelSwitcher = 3;
+		return false;
+	});
+
+
+
 	$('.closePanel').click(function(){
 		$(this).fadeToggle(300);
 		if(panelSwitcher == 1){
@@ -104,7 +133,7 @@ $(document).ready(function() {
 		}else if(panelSwitcher == 2){
 			$('.signupForm').fadeToggle(500);
 		}
-		$('.accountPanel').animate({marginLeft:'-=280px'},{duration:'400'});
+		$('.accountPanel').animate({marginLeft:'-=200px'},{duration:'400'});
 		panelSwitcher = 0;
 		return false;
 	});
@@ -113,10 +142,10 @@ $(document).ready(function() {
 			$('.accountSwitch.signedIn').click(function(){
 				if(panelSwitcher2 == false){
 					panelSwitcher2 = true;
-					$('.accountPanel.signedIn').animate({marginLeft:'+=250px'},{duration:'500'});
+					$('.accountPanel.signedIn').animate({marginLeft:'+=200px'},{duration:'500'});
 				}else{
 					panelSwitcher2 = false;
-					$('.accountPanel.signedIn').animate({marginLeft:'-=250px'},{duration:'500'});
+					$('.accountPanel.signedIn').animate({marginLeft:'-=200px'},{duration:'500'});
 				}
 				return false;
 			});
@@ -323,11 +352,11 @@ $(document).ready(function() {
 	    	initNum = 0;
 	    }
 
-	    sContainer.find('.active').animate({top:'-=10px',opacity:0},{duration:150}).removeClass('active');
-	    sContainer.children().eq(initNum).css('top','-10px').delay(170).animate({top:'-=10px',opacity:1},{duration:150}).delay(400).addClass('active');
+	    sContainer.find('.active').animate({top:'-=43px'},{duration:550}).removeClass('active');
+	    sContainer.children().eq(initNum).css({'top':'10px', 'opacity':0}).delay(200).animate({top:'-=10px',opacity:1},{duration:250}).delay(400).addClass('active')
 
 	    console.log('hey');
-	}, 3000);
+	}, 4000);
 
 	//
 	// Shortlisting
@@ -358,7 +387,7 @@ $(document).ready(function() {
     //
     // Homepage Slider Banner
     // 
-    $('.homepageBanner ul').rhinoslider({
+    $('.homepageBanner ul.banners').rhinoslider({
 		effectTime: 500,
 		showTime: 4000,
 		controlsMousewheel: false,

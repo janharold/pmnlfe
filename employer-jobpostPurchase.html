@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PortfolioMNL</title>
+	<link rel="stylesheet" href="css/pmnlStyle.css">
+	<link rel="stylesheet" href="js/jquery.switch/jquery.switch.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/rhinoslider105/js/rhinoslider-1.05.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
+</head>
+<body>
+	<!-- this Portion is Reserved for Modal and Floating Navigation -->
+	<div class="modalBox"></div>
+	<div class="pmnlFloatNav">
+		<div class="accountPanel">
+			<form action="">
+				<fieldset class="loginForm">
+					<legend class="euroStile">Welcome Back!</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<span class="inputRow">
+						<input type="checkbox"><label for="">Remember Me</label>
+						<a href="#" class="fp">Forgot Password</a>
+					</span>
+					<span class="inputRow">
+						<button type="submit" class="signin">Back for More</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+
+
+				<fieldset class="signupForm">
+					<legend class="euroStile">Welcome to our community.
+We’re delighted to have you.</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<input type="text" value="confirm password">
+					
+					<span class="inputRow">
+						<button type="submit" class="join">Join the Fun</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+			</form>
+			<div class="panelError">
+				<p>This is an error prompt.</p>
+			</div>
+		</div>
+		<nav class="panelSwitch">
+			<a href="#" class="bankGothic signupBTN">join</a><a href="#" class="bankGothic loginBTN">login</a>
+			<a href="#" class="closePanel"><img src="images/icons/close.png" alt=""></a>
+		</nav>
+	</div>
+
+	<div class="centerWrap">
+		<div class="floatWrap">
+
+
+			<div class="pmnlBranding">
+				<h1><a href="index.html"><img src="images/branding/portfolioMNL_logo.png" alt="PortfolioMNL Logo"></a></h1>
+				<nav>
+					<ul class="bankGothic">
+						<li><a href="#">Portfolios</a></li>
+						<li><a href="#">Job Listings</a></li>
+					</ul>
+				</nav>
+				<form class="pmnlSearch" action="">
+					<input type="text" class="tField bankGothic" value="search">
+					<input type="submit" class="tSubmit" value="go">
+				</form>
+				<div class="stickerPost">
+					<h4><a href="#">Post a Job!</a></h4>
+					<div class="stickies">
+						<a href="#" class="active" style="opacity:1; top:-20px;">
+							<h5>UI Designer</h5>
+							<h6>Brewed Concepts</h6>
+						</a>
+						<a href="#" class="" style="opacity:0;">
+							<h5>Industrial Desi..</h5>
+							<h6>AIGC Industry</h6>
+						</a>
+						<a href="#" class="" style="opacity:0;">
+							<h5>Architect</h5>
+							<h6>Lettuk Inc</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 
+				I N N E R   W R A P
+				Breadcrumbs, Content
+			-->
+			<div class="innerWrap">
+				<div class="pmnlContent">
+					<ul class="pmnlBreadcrumbs">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Subpage</a></li>
+						<li>Current Page</li>
+					</ul>
+
+					<div class="gfContainer pmnlSectionNav">
+						<ul class="manageProfile purchasePackages">
+							<li><a href="jobpostPurchase.html" class="euroStile active">Choose<p>Select a Package</p></a></li>
+							<li><a href="formPayment.html" class="euroStile ">Payment<p>Lorem Ipsum</p></a></li>
+							<li><a href="#" class="euroStile">Fill Out<p>Forms</p></a></li>
+							
+						</ul>
+					</div>
+					<div class="gfContainer pmnlSectionHeader jobsSection">
+						<div class="gBox lEdge col_4">
+							<h2 class="euroStile">Post a Job</h2>
+						</div>
+						<div class="gBox col_6">
+							<p class="euroStile">Welcome. Our job listings is designed for hiring creative professionals. 
+Let’s get started: Select a package or if you already purchased one, 
+sign-in to get on your way.</p>
+							
+						</div>
+						<div class="gBox rEdge col_2">
+							<a href="#" class="job">Sign In</a>
+						</div>
+					</div> 
+
+					<div class="gfContainer jobpostPurchase">
+						<ul>
+							<li class="qp">
+								<h3>Quick Post</h3>
+								<h4>P 499</h4>
+								<p>Need a freelancer yesterday? Post a job listing for 5 days. ‘Cuz next week, it’ll be too late.</p>
+								<a href="#">Purchase</a>
+							</li>
+							<li>
+								<h3>Single Post</h3>
+								<h4>P 4999</h4>
+								<p class="freesign">*For the month of October 2013</p>
+								<p>Our job listings have lasting power. Not just one...but 2 months! Single posts lasts 60 days.</p>
+								<a href="#">Purchase</a>
+								<img src="images/backgrounds/free.png" alt="" class="free">
+							</li>
+							<li>
+								<h3>6 Posts</h3>
+								<h4>P 25,499</h4>
+								<p><em>Save %15!</em> <br>Pre pay 6 single posts. Each post lasts 60 days and never 
+expires.</p>
+								<a href="#">Purchase</a>
+							</li>
+							<li>
+								<h3>12 Posts</h3>
+								<h4>P 44,999</h4>
+								<p><em>Save %25!</em><br>Pre pay 12 single posts. Each post lasts 60 days and never expires.</p>
+								<a href="#">Purchase</a>
+							</li>
+						</ul>
+					</div>
+					<div class="gfContainer jobConcierge">
+						<div class="gBox col_4">
+							<h5>CORPORATE PASSPORT</h5>
+						</div>
+						<div class="gBox col_6">
+							<h6>Unlimited job posts + PREMIERE brand presence</h6>
+							<p>Does your business do frequent hiring? Want your company to stand out from the crowd? Maximize hiring power and brand presence, within and beyond PortfolioMNL. For more information, contact our Corporate Concierge today.</p>
+							<div class="col_3">
+							<a href="#">CONTACT CONCIERGE </a>
+							</div>
+						</div>
+					</div>
+				</div>	
+				
+			</div>
+		
+			<div class="pmnlFooter">
+					<ul class="leftNav">
+						<li><a href="#">How MNL Works</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#"><img src="images/icons/email_white.png" alt=""></a></li>
+					</ul>
+					<ul class="rightNav">
+						<li><a href="#"><img src="images/icons/linkedin_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/facebook_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/twitter_white.png" alt=""></a></a></li>
+						<li><a href="#"><img src="images/icons/pinterest_white.png" alt=""></a></a></li>
+						<li ><a href="#" class="cp">© 2013 PortfolioMNL. All rights reserved.<br>
+<i>Terms of Use & Privacy Policy</i></a></li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

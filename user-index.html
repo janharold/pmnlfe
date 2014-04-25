@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PortfolioMNL</title>
+	<link rel="stylesheet" href="css/pmnlStyle.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/jquery.switch/jquery.switch.min.js"></script>
+	<script type="text/javascript" src="js/rhinoslider105/js/rhinoslider-1.05.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
+</head>
+<body>
+	<!-- this Portion is Reserved for Modal and Floating Navigation -->
+	<div class="modalBox"></div>
+	<div class="pmnlFloatNav">
+		<div class="accountPanel">
+			<form action="">
+				<fieldset class="loginForm">
+					<h5 class="euroStile">Yo wassup dawg.<br/>
+(a.k.a. Nice to see you again)</h5>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<span class="inputRow">
+						<input type="checkbox"><label for="">Remember Me <a href="#" class="fp forgotBTN">Forgot Password</a></label>
+						
+					</span>
+					<span class="inputRow">
+						<button type="submit" class="signin">Back for More</button>
+						<a href="#" class="llinked"><img src="images/icons/linkedin_white_in.png" alt="" width="20">Sign-in with LinkedIn</a>
+					</span>
+				</fieldset>
+
+
+				<fieldset class="signupForm">
+					<h5 class="euroStile">Welcome to our community.
+We’re delighted to have you.</h5>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<input type="text" value="confirm password">
+					<span class="inputRow terms">
+						<input type="checkbox"><label for="">I agree with the PortfolioMNL
+					<a href="#">Terms and Condition</a>	</label>
+					</span>
+
+					<span class="inputRow">
+						<h4 class="euroStile">I’d like to start with</h4>
+						<input type="radio" name="profileType" class="profileType" id="pt"><label>Creating a Portfolio</label>
+						<input type="radio" name="profileType" class="profileType" id="pt" checked><label>Posting a Job</label>
+					</span>
+
+					<span class="inputRow">
+						<button type="submit" class="join">Join the Fun</button>
+						<a href="#" class="llinked"><img src="images/icons/linkedin_white_in.png" alt="" width="20">Sign-in with LinkedIn</a>
+					</span>
+					
+				</fieldset>
+
+				<fieldset class="forgotForm">
+					<legend class="euroStile">Forgot your password?</legend>
+					<input type="text" value="email">
+					
+					<span class="inputRow">
+						<button type="submit" class="submit">Send My Password</button>
+						
+					</span>
+					
+				</fieldset>
+			</form>
+			<div class="panelError">
+				<p>This is an error prompt.</p>
+			</div>
+		</div>
+		<nav class="panelSwitch">
+			<a href="#" class="bankGothic signupBTN">join</a>
+			<a href="#" class="bankGothic loginBTN active">login</a>
+			<a href="#" class="closePanel">Close Panel</a>
+		</nav>
+		
+	</div>
+
+	<div class="centerWrap">
+		<div class="floatWrap">
+
+
+			<div class="pmnlBranding">
+				<h1><a href="index.html"><img src="images/branding/portfolioMNL_logo.png" alt="PortfolioMNL Logo"></a></h1>
+				<nav>
+					<ul class="bankGothic">
+						<li><a href="#">Search <br>Portfolios</a></li>
+						<li><a href="#">Search <br>Job Listings</a></li>
+					</ul>
+				</nav>
+				<form class="pmnlSearch" action="">
+					<input type="text" class="tField bankGothic" value="search">
+					<input type="submit" class="tSubmit" value="go">
+				</form>
+				<div class="stickerPost">
+					<h4><a href="#">Post a Job!</a></h4>
+					<div class="stickies-static">
+						<a href="#" class="active" style="opacity:1; top:-5px;">
+							<h5>UI Designer</h5>
+							<h6>Brewed Concepts</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 
+				I N N E R   W R A P
+				Breadcrumbs, Content
+			-->
+			<div class="innerWrap">
+				<div class="pmnlContent">
+					<div class="gfContainer homepageBanner">
+						<ul class="banners">
+							<li class="portal">
+								<ul>
+									<li><a href="#">Thailand</a></li>
+									<li><a href="#">Singapore</a></li>
+									<li><a href="#">Indonesia</a></li>
+									<li><a href="#">Philippines</a></li>
+									<li><a href="#">Vietnam</a></li>
+									<li><a href="#">Malaysia</a></li>
+								</ul>
+							</li>
+							<li><img src="images/samples/banner1.png" alt=""></li>
+							<li><img src="images/samples/banner2.jpg" alt=""></li>
+							<li><img src="images/samples/banner3.jpg" alt=""></li>
+							<li><img src="images/samples/banner4.jpg" alt=""></li>
+						</ul>
+						
+						
+
+					</div>
+					<div class="fullpageNotification Success">
+							<h6>Welcome aboard, Matey! Arr! <img src="images/icons/welcome-emoticon.png" alt=""></h6>
+						</div>
+					<div class="gfContainer pmnlHomepage">
+						
+						
+						<h3 class="euroStile">Featured Portfolios</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<h4>Juan Dela Cruz</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+							</li>
+							<li>
+								<a href="#">
+									<h4>Jan Harold Diaz</h4>
+									<h5>Web Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Nikki Enriquez</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Reynan Alibuyog</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Darryl Anne Guiterrez</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+						</ul>
+						<h3 class="euroStile">Featured Jobs</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<h4>Juan Dela Cruz</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Jan Harold Diaz</h4>
+									<h5>Web Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Nikki Enriquez</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Reynan Alibuyog</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Darryl Anne Guiterrez</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+						</ul>
+						<h3 class="euroStile">Network</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<h4>Juan Dela Cruz</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Jan Harold Diaz</h4>
+									<h5>Web Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Nikki Enriquez</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Reynan Alibuyog</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Darryl Anne Guiterrez</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+
+							</li>
+							<li>
+								<a href="#">
+									<h4>Bew Trinidad</h4>
+									<h5>Graphic Design</h5>
+									<i>250</i>
+								</a>
+								<img src="images/samples/thumbPortfolio.png" alt="" width="125">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div class="pmnlFooter">
+					<ul class="leftNav">
+						<li><a href="#">How MNL Works</a>
+							<ul>
+								<li><a href="#">FAQs Page</a></li>
+								<li><a href="#">FAQs Page</a></li>
+								<li><a href="#">FAQs Page</a></li>
+							</ul>
+						</li>
+						<li><a href="#">About</a>
+							<ul>
+								<li><a href="#">FAQs Page</a></li>
+								<li><a href="#">FAQs Page</a></li>
+								<li><a href="#">FAQs Page</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#"><img src="images/icons/email_white.png" alt=""></a></li>
+						
+					</ul>
+					<ul class="rightNav">
+						<li><a href="#" class="is"><img src="images/branding/ideaspace-logo.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/facebook_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/twitter_white.png" alt=""></a></a></li>
+						<li><a href="#"><img src="images/icons/pinterest_white.png" alt=""></a></a></li>
+						<li ><a href="#" class="cp">© 2013 PortfolioMNL. All rights reserved.<br>
+<i>Terms of Use & Privacy Policy</i></a></li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

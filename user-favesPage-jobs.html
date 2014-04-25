@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PortfolioMNL</title>
+	<link rel="stylesheet" href="css/pmnlStyle.css">
+	<link rel="stylesheet" href="js/jquery.switch/jquery.switch.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/jquery.icheck.min.js"></script>
+	<script type="text/javascript" src="js/rhinoslider105/js/rhinoslider-1.05.min.js"></script>
+	<script type="text/javascript" src="js/pmnlApp.js"></script>
+</head>
+<body>
+	<!-- this Portion is Reserved for Modal and Floating Navigation -->
+	<div class="modalBox"></div>
+	<div class="pmnlFloatNav">
+		<div class="accountPanel">
+			<form action="">
+				<fieldset class="loginForm">
+					<legend class="euroStile">Welcome Back!</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<span class="inputRow">
+						<input type="checkbox"><label for="">Remember Me</label>
+						<a href="#" class="fp">Forgot Password</a>
+					</span>
+					<span class="inputRow">
+						<button type="submit" class="signin">Back for More</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+
+
+				<fieldset class="signupForm">
+					<legend class="euroStile">Welcome to our community.
+We’re delighted to have you.</legend>
+					<input type="text" value="email">
+					<input type="text" value="password">
+					<input type="text" value="confirm password">
+					
+					<span class="inputRow">
+						<button type="submit" class="join">Join the Fun</button>
+						<a href="#" class="llinked">Login with LinkedIn</a>
+					</span>
+				</fieldset>
+			</form>
+			<div class="panelError">
+				<p>This is an error prompt.</p>
+			</div>
+		</div>
+		<nav class="panelSwitch">
+			<a href="#" class="bankGothic signupBTN">join</a><a href="#" class="bankGothic loginBTN">login</a>
+			<a href="#" class="closePanel"><img src="images/icons/close.png" alt=""></a>
+		</nav>
+	</div>
+
+	<div class="centerWrap">
+		<div class="floatWrap">
+
+
+			<div class="pmnlBranding">
+				<h1><a href="index.html"><img src="images/branding/portfolioMNL_logo.png" alt="PortfolioMNL Logo"></a></h1>
+				<nav>
+					<ul class="bankGothic">
+						<li><a href="#">Portfolios</a></li>
+						<li><a href="#">Job Listings</a></li>
+					</ul>
+				</nav>
+				<form class="pmnlSearch" action="">
+					<input type="text" class="tField bankGothic" value="search">
+					<input type="submit" class="tSubmit" value="go">
+				</form>
+				<div class="stickerPost">
+					<h4><a href="#">Post a Job!</a></h4>
+					<div class="stickies">
+						<a href="#" class="active" style="opacity:1; top:-20px;">
+							<h5>UI Designer</h5>
+							<h6>Brewed Concepts</h6>
+						</a>
+						<a href="#" class="" style="opacity:0;">
+							<h5>Industrial Desi..</h5>
+							<h6>AIGC Industry</h6>
+						</a>
+						<a href="#" class="" style="opacity:0;">
+							<h5>Architect</h5>
+							<h6>Lettuk Inc</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 
+				I N N E R   W R A P
+				Breadcrumbs, Content
+			-->
+			<div class="innerWrap">
+				<div class="pmnlContent">
+					<ul class="pmnlBreadcrumbs">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Subpage</a></li>
+						<li>Current Page</li>
+					</ul>
+
+					<div class="gfContainer pmnlSectionNav employerDashboard">
+						<ul class="manageProfile employerDashboard">
+							<li><a href="#" class="euroStile ">Portfolios</a></li>
+							<li><a href="#" class="euroStile active">Job Listings</a></li>
+							
+						</ul>
+					</div>
+					<div class="gfContainer pmnlSectionHeader jobsSection">
+						<div class="gBox lEdge col_4">
+							<h2 class="euroStile">Faves</h2>
+						</div>
+						<div class="gBox col_6">
+							<p class="euroStile">A list of all the dream jobs or companies that caught your eye and would love to work for.</p>
+							
+						</div>
+					</div> 
+
+					<div class="gfContainer">
+						<div class="pmnlJobList faves">
+							<ul>
+								<li>
+									<h3><a href="#">Job Post Title Goes Here</a> <em>DEC 20, 2012</em></h3>
+									<p>Samsung <i>&#149;</i> Industrial Designer <i>&#149;</i> Caloocan, Philippines <a href="#" class="markJob">0</a></p>
+								</li>
+								<li>
+									<h3><a href="#">Job Post Title Goes Here</a> <em>DEC 20, 2012</em></h3>
+									<p>Samsung <i>&#149;</i> Industrial Designer <i>&#149;</i> Caloocan, Philippines <a href="#" class="markJob">0</a></p>
+								</li>
+								<li>
+									<h3><a href="#">Job Post Title Goes Here</a> <em>DEC 20, 2012</em></h3>
+									<p>Samsung <i>&#149;</i> Industrial Designer <i>&#149;</i> Caloocan, Philippines <a href="#" class="markJob">0</a></p>
+								</li>
+								<li>
+									<h3><a href="#">Job Post Title Goes Here</a> <em>DEC 20, 2012</em></h3>
+									<p>Samsung <i>&#149;</i> Industrial Designer <i>&#149;</i> Caloocan, Philippines <a href="#" class="markJob">0</a></p>
+								</li>
+							</ul>
+							<div class="postPagination">
+								<ul>
+									<li><a href="#" class="edge">&#8249;</a></li>
+									<li><a href="#" class="disabled">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">6</a></li>
+									<li><a href="#">7</a></li>
+									<li><a href="#" class="edge">&#8250;</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					</div>
+				</div>	
+				
+			</div>
+		
+			<div class="pmnlFooter">
+					<ul class="leftNav">
+						<li><a href="#">How MNL Works</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#"><img src="images/icons/email_white.png" alt=""></a></li>
+					</ul>
+					<ul class="rightNav">
+						<li><a href="#"><img src="images/icons/linkedin_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/facebook_white.png" alt=""></a></li>
+						<li><a href="#"><img src="images/icons/twitter_white.png" alt=""></a></a></li>
+						<li><a href="#"><img src="images/icons/pinterest_white.png" alt=""></a></a></li>
+						<li ><a href="#" class="cp">© 2013 PortfolioMNL. All rights reserved.<br>
+<i>Terms of Use & Privacy Policy</i></a></li>
+					</ul>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
