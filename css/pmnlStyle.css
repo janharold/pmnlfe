@@ -151,10 +151,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44c8bd', end
 	.pmnlBranding{width:1200px; display:block; float:left; background:url(../images/backgrounds/brandingBG.png) no-repeat; height:113px; padding:0 50px 0; margin-top:15px; margin-bottom:0px; position: fixed; z-index: 200;}
 	.pmnlBranding h1{float:left; margin:25px 20px 0 0;}
 	.pmnlBranding nav{}
-	.pmnlBranding nav ul{float:left; border-left: 1px solid #114776; margin:0 40px 0 30px; padding:0;}
-	.pmnlBranding nav ul li{display: inline-block; margin: 0; padding:0; position: relative;  float:left;  border-right: 1px solid #114776;}
+	.pmnlBranding nav ul{float:left; border-left: 1px solid #000; margin:0 40px 0 30px; padding:0;}
+	.pmnlBranding nav ul li{display: inline-block; margin: 0; padding:0; position: relative;  float:left;  border-right: 1px solid #000;}
 	.pmnlBranding nav ul li a{float:left; font-size:18px; color:#fff; text-transform: uppercase; padding:31px 25px; text-align: center;}
-	.pmnlBranding nav ul li a:hover{color:#00d8ff;}
+	.pmnlBranding nav ul li a:hover{color:#05d6ff; background:#89b6c7;}
 		.pmnlBranding nav ul li a.disabled{cursor:default; position: relative;}
 		.pmnlBranding nav ul li a i{position: absolute; font-size:0.6em; color:#00cebb; right: 0px; top:15px; width:110px;}
 		.pmnlBranding nav ul li a.disabled:hover{color:#fff;}
@@ -750,6 +750,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44c8bd', end
 		.portfolioSidebar nav a:hover, .portfolioSidebar nav a.active{color:#3d3a7e; background-position: 0 -24px;}
 	
 	.portfolioSidebar a.backLink{font-size:0.85em; color:#00aeef; padding:10px 30px 10px 5px; display: block;}
+	
+	.portfolioSidebar .network h4{color:#333; font-family: 'Eurosti'; font-weight:bold; text-transform: uppercase; margin:10px 0 5px;}
 
 	/* Contact Us */
 	.pmnlContact{position: relative;}
